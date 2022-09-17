@@ -27,7 +27,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
  <li>Integrantes do projeto e uma pequena descrição de qual problema o software de vocês resolverá</li>
 </ul>
 
-# Code Climate CLI
+
 [![Code Climate](https://codeclimate.com/github/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf/badges/gpa.svg)](https://codeclimate.com/github/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf)
 [![CircleCI](https://circleci.com/gh/codeclimate/codeclimate.svg?style=svg)](https://circleci.com/gh/codeclimate/codeclimate)
 
