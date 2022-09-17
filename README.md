@@ -1,6 +1,21 @@
 # Trabalho_Eng._de_Sistemas_de_Inf.
 Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 
+
+<div align="center">
+ <img alt="luiz-got" height="200" width="500" src="https://media.giphy.com/media/UehcPssUfgQUM/giphy.gif">
+</div>
+
+
+<b>Integrantes:</b> 
+
+Luiz Fernanco Conceção dos Santos
+Camila Felinto Surião 
+José Rafael Rodrigues Nascimento
+Vinicius Roland Crisci
+
+<b>Informações:</b> 
+
 1. "CodeClimate badge" mostrando o GPA do projeto
 2. "Github Actions badge" mostrando o status workflow referente a branch master (deve ser: passing)
 3. "Coveralls badge" mostrando a cobertura de teste do código desenvolvido
