@@ -9,20 +9,23 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 
 <b>Integrantes:</b> 
 
-Luiz Fernanco Conceção dos Santos
-Camila Felinto Surião 
-José Rafael Rodrigues Nascimento
-Vinicius Roland Crisci
+<ul>
+ <li>Luiz Fernanco Conceção dos Santos</li>
+ <li>Camila Felinto Surião</li>
+ <li>José Rafael Rodrigues Nascimento</li>
+ <li>Vinicius Roland Crisci</li>
+</ul>
 
 <b>Informações:</b> 
 
-1. "CodeClimate badge" mostrando o GPA do projeto
-2. "Github Actions badge" mostrando o status workflow referente a branch master (deve ser: passing)
-3. "Coveralls badge" mostrando a cobertura de teste do código desenvolvido
-4. Link para a app implantada no Heroku
-5. Link para o projeto no Pivotal Tracker (não crie um projeto agora, o link será fornecido por mim, o projeto no Pivotal será criado assim que os grupos forem definidos)
-6. Integrantes do projeto e uma pequena descrição de qual problema o software de vocês resolverá
-
+<ul>
+ <li>"CodeClimate badge" mostrando o GPA do projeto</li>
+ <li>"Github Actions badge" mostrando o status workflow referente a branch master (deve ser: passing)</li>
+ <li>"Coveralls badge" mostrando a cobertura de teste do código desenvolvido</li>
+ <li>Link para a app implantada no Heroku</li>
+ <li>Link para o projeto no Pivotal Tracker (não crie um projeto agora, o link será fornecido por mim, o projeto no Pivotal será criado assim que os grupos forem definidos)</li>
+ <li>Integrantes do projeto e uma pequena descrição de qual problema o software de vocês resolverá</li>
+</ul>
 
 
 [![Trabalho_Eng_Sistemas_Inf](https://github.com/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf/actions/workflows/main.yml/badge.svg)](https://github.com/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf/actions/workflows/main.yml)
