@@ -16,14 +16,10 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
  <li>Vinicius Roland Crisci</li>
 </ul>
 
-<b>Informações:</b> 
+<b>Detalhes:</b> 
 
 <ul>
- <li>"CodeClimate badge" mostrando o GPA do projeto</li>
- <li>"Github Actions badge" mostrando o status workflow referente a branch master (deve ser: passing)</li>
- <li>"Coveralls badge" mostrando a cobertura de teste do código desenvolvido</li>
- <li>Link para a app implantada no Heroku</li>
- <li>Link para o projeto no Pivotal Tracker (não crie um projeto agora, o link será fornecido por mim, o projeto no Pivotal será criado assim que os grupos forem definidos)</li>
+ <li>Software Analítico</li>
  <li>O projeto é um facilitador de repositórios, será usado a API do github para coletar as informações dos repositórios e usuários. Depois que o projeto é escolhido, vai ser possível visualizar detalhes do usuário que produziu. Dessa forma, iniciaremos com 3 camadas, a primeira será uma tela de login, a segunda será uma tela de busca, podendo buscar por usuários ou nomes de repositórios, a utilização vai ser simples, o cliente vai escrever o nome de um projeto, linguagem ou nome de usuário cadastrado no github e por fim, aparecerá na terceira camada um detalhamento sobre essa busca</li>
 </ul>
 
