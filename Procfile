@@ -1,1 +1,1 @@
-web: open /front-end/index.html
+/front-end/index.html
