@@ -1,1 +1,0 @@
-web: /front-end/index.html
