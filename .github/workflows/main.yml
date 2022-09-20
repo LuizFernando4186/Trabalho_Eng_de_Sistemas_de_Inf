@@ -22,7 +22,7 @@ jobs:
         run: bundler exec rake
 
       - name: User Stories Test
-        run: echo Hello, world!
+        run: bundler exec cucumber
   
   prod: 
     runs-on: ubuntu-latest
