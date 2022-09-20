@@ -24,7 +24,7 @@ jobs:
   
   prod: 
     runs-on: ubuntu-latest
-    needs: dev
+    needs: test
     steps:
       - name: Run a one-line script
         run: echo Deploy de prod
