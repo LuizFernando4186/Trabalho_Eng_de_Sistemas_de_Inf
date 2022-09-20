@@ -1,3 +1,13 @@
 language: ruby
 rvm:
  - 2.2
+install:
+- bundle install
+- nvm install node
+- node -v
+- npm i -g yarn
+- yarn
+script: 
+    - bundle exec rake spec
+    - bundle exec rake cucumber
+repo_token: uKXo1he0EBuHeaqnqf91HZETcSjJpyWsS
