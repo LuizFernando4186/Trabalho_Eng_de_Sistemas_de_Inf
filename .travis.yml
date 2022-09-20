@@ -10,4 +10,3 @@ install:
 script: 
     - bundle exec rake spec
     - bundle exec rake cucumber
-repo_token: uKXo1he0EBuHeaqnqf91HZETcSjJpyWsS
