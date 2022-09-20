@@ -13,7 +13,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
  <li>Camila Felinto Surião</li>
  <li>Danielle Guia de Souza</li>
  <li>José Rafael Rodrigues Nascimento</li>
- <li>Luiz Fernanco Conceção dos Santos</li>
+ <li>Luiz Fernando Conceição dos Santos</li>
  <li>Vinicius Roland Crisci</li>
 </ul>
 
