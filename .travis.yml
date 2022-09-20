@@ -1,11 +1,3 @@
 language: ruby
-rvm:
- - 2.2
-script: "sbt clean coverage test"
-
-after_success: "sbt coveralls"
-
-notifications:
-  email:
-    recipients:
-      - luizfernandossantos909@usp.br
+after_success:
+  - coveralls
