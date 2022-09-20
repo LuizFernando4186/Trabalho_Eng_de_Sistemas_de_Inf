@@ -1,21 +1,27 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Trabalho_Eng_Sistemas_Inf
-on:
-  workflow_dispatch:
+
+on: [push, pull_request]
+
 jobs:
-  build:
+  
+  test:
     runs-on: ubuntu-latest
+    name: Tests
     steps:
-      - name: Run a one-line script
+      - uses: actions/checkout@v3
+      - uses: actions/setup-ruby@v1
+
+      - name: Install dependencies
+        run: bundle install
+      
+      - name: Unit Tests
+        run: bundler exec rake
+
+      - name: User Stories Test
         run: echo Hello, world!
-        
-  dev:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy de Dev
+  
   prod: 
     runs-on: ubuntu-latest
     needs: dev
