@@ -21,7 +21,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 
 <ul>
  <li>Software Analítico</li>
- <li>Heroku: https://app-esi-2022.herokuapp.com/ </li>
+ <li>Heroku: https://eng-soft-each.herokuapp.com/ </li>
  <li>O projeto é um facilitador de repositórios, será usado a API do github para coletar as informações dos repositórios e usuários. Depois que o projeto é escolhido, vai ser possível visualizar detalhes do usuário que produziu. Dessa forma, iniciaremos com três camadas, a primeira será uma tela de login, a segunda será uma tela de busca, podendo buscar por usuários ou nomes de repositórios, a utilização vai ser simples, o cliente vai escrever o nome de um projeto, linguagem ou nome de usuário cadastrado no github e por fim, aparecerá na terceira camada um detalhamento sobre essa busca</li>
 </ul>
 
