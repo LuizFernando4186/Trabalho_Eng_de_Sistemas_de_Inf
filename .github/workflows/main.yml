@@ -25,10 +25,9 @@ jobs:
         run: bundler exec cucumber
       
       - name: Coveralls
-        uses: LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf@main
+        uses: Trabalho_Eng_de_Sistemas_de_Inf/github-action@main
         with:
-          parallel: true
-          flag-name: Unit Test
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         
   prod: 
     runs-on: ubuntu-latest
