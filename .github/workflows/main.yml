@@ -23,18 +23,13 @@ jobs:
 
       - name: User Stories Test
         run: bundler exec cucumber
+      
+      - name: Coveralls
+        uses: LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf@main
+        with:
+          parallel: true
+          flag-name: Unit Test
         
- 
-  coverals:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Coveralls Finished
-      uses: coverallsapp/github-action@main
-      with:
-        github-token: ${{secrets.github_token}}
-        parallel-finished: true
-  
   prod: 
     runs-on: ubuntu-latest
     needs: test
