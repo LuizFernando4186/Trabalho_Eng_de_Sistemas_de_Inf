@@ -24,10 +24,16 @@ jobs:
       - name: User Stories Test
         run: bundler exec cucumber
         
-      - name: Coveralls
-        uses: coverallsapp/github-action@master
-        with:
-             github-token: ${{ secrets.GITHUB_TOKEN }}
+ 
+  coverals:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Coveralls Finished
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.github_token }}
+        parallel-finished: true
   
   prod: 
     runs-on: ubuntu-latest
