@@ -30,9 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Coveralls Finished
-      uses: coverallsapp/github-action@master
+      uses: coverallsapp/github-action@main
       with:
-        github-token: ${{ secrets.github_token }}
+        github-token: ${{secrets.github_token}}
         parallel-finished: true
   
   prod: 
