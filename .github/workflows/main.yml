@@ -17,6 +17,9 @@ jobs:
 
       - name: Install dependencies
         run: bundle install
+
+      - name: Run migrations
+        run: rails db:migrate RAILS_ENV=test
       
       - name: Unit Tests
         run: bundler exec rake
