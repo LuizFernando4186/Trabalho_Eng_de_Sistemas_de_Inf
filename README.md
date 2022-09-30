@@ -3,7 +3,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 
 
 <div align="center">
- <img alt="luiz-got" height="200" width="500" src="https://media.giphy.com/media/UehcPssUfgQUM/giphy.gif">
+ <img alt="luiz-got" height="200" width="500" src="https://meumundoinvisivel.files.wordpress.com/2012/04/tumblr_luq0zetzak1r3rotoo1_500.gif">
 </div>
 
 
