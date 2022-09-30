@@ -27,14 +27,8 @@ jobs:
       - name: User Stories Test
         run: bundler exec cucumber
       
-     # - name: Coveralls
-     #   uses: Trabalho_Eng_de_Sistemas_de_Inf/github-action@main
-     #   with:
-     #     github-token: ${{ secrets.GITHUB_TOKEN }}
-        
-  prod: 
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Run a one-line script
-        run: echo Deploy de prod
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
