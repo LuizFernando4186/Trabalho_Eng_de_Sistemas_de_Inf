@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   #root "articles#index"
   root to: "home#index"
 
+
+  post "/aluno", to: "aluno#create"
+  get "/alunos", to: "aluno#list"
 end
