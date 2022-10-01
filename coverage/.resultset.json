@@ -1,6 +1,26 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/models/aluno.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/channels/application_cable/channel.rb": [
         0,
         0,
@@ -39,14 +59,6 @@
         0,
         0
       ],
-      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/helpers/application_helper.rb": [
-        0,
-        0
-      ],
-      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/helpers/home_helper.rb": [
-        0,
-        0
-      ],
       "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/jobs/application_job.rb": [
         0,
         null,
@@ -61,20 +73,8 @@
         0,
         0,
         0
-      ],
-      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/models/aluno.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/rolandvi/Projects/each/Trabalho_Eng_de_Sistemas_de_Inf/app/models/application_record.rb": [
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1664585426
+    "timestamp": 1664586517
   }
 }

@@ -1,6 +1,3 @@
-require 'coveralls'
-Coveralls.wear!('rails')
-
 require 'rails_helper'
 
 RSpec.describe Aluno, type: :model do
