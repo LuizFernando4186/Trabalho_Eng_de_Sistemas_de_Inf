@@ -34,6 +34,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           
-      -name: Push Coveralls
+      - name: Push Coveralls
         run: bundle exec coveralls push
 
