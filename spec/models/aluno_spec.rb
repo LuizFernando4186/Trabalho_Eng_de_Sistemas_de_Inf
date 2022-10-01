@@ -8,12 +8,12 @@ RSpec.describe Aluno, type: :model do
   end
   it 'invalido sem email' do
     aluno = Aluno.new
-    aluno.nome = "jose"
+    aluno.name = "jose"
     expect(aluno).not_to be_valid
   end
   it 'invalido com email com formato invalido' do
     aluno = Aluno.new
-    aluno.nome = "jose"
+    aluno.name = "jose"
     aluno.email = "jose!#,@g!.com"
     expect(aluno).not_to be_valid
   end
