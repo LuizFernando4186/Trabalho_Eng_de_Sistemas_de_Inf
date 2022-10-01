@@ -22,7 +22,7 @@ jobs:
         run: rails db:migrate RAILS_ENV=test
       
       - name: Unit Tests
-        run: bundler exec rake :test_with_coveralls
+        run: bundler exec rake
 
       - name: User Stories Test
         run: bundler exec cucumber
@@ -33,4 +33,7 @@ jobs:
         uses: coverallsapp/github-action@1.1.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          
+      -name: Push Coveralls
+        run: bundle exec coveralls push
 
