@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2022_09_29_214710) do
   create_table "alunos", force: :cascade do |t|
-    t.string "name"
+    t.string "nome"
     t.string "email"
     t.integer "nusp"
     t.datetime "created_at", null: false
