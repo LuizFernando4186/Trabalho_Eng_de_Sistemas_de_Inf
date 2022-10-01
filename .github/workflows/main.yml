@@ -30,7 +30,10 @@ jobs:
       - name: Coveralls
         env:
           RAILS_ENV: test
+          COVERALLS_REPO_TOKEN: yjtnbZH5Qhtb0Y4c7iupFRDF8lF5h4uwM
+          CI: true
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+        run: bundle exec rspec spec
 
