@@ -1,4 +1,5 @@
 require 'simplecov-lcov'
+require 'simplecov-html'
 
 SimpleCov::Formatter::LcovFormatter.config do |c|
   c.report_with_single_file = true

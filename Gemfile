@@ -43,6 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'coveralls', require: false
+gem 'simplecov-lcov', require: false
 
 
 # Use Sass to process CSS
