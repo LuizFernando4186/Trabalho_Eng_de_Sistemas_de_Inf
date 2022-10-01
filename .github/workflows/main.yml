@@ -22,7 +22,7 @@ jobs:
         run: rails db:migrate RAILS_ENV=test
       
       - name: Unit Tests
-        run: bundler exec rake
+        run: bundler exec rake :test_with_coveralls
 
       - name: User Stories Test
         run: bundler exec cucumber
