@@ -20,9 +20,10 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 <b>Detalhes:</b> 
 
 <ul>
- <li>Software Analítico</li>
+ <li>Sistema de Avaliação</li>
  <li>Heroku: https://organizador-esi.herokuapp.com/ </li>
- <li>O projeto é um facilitador de repositórios, será usado a API do github para coletar as informações dos repositórios e usuários. Depois que o projeto é escolhido, vai ser possível visualizar detalhes do usuário que produziu. Dessa forma, iniciaremos com três camadas, a primeira será uma tela de login, a segunda será uma tela de busca, podendo buscar por usuários ou nomes de repositórios, a utilização vai ser simples, o cliente vai escrever o nome de um projeto, linguagem ou nome de usuário cadastrado no github e por fim, aparecerá na terceira camada um detalhamento sobre essa busca</li>
+ <li>Este projeto tem como objetivo desenvolver um sistema de avaliações em relação a conceitos de DevOps, possuindo questões abertas e fechadas. Visa-se um maior grau automação durante a correção das atividades, conferindo feedback automático aos alunos sempre que possível, além de diminuir o esforço desnecessário de professores.
+</li>
 </ul>
 
 
