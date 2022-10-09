@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   #root "articles#index"
   root to: "provas#new"
 
-  post "/aluno", to: "aluno#create"
-  get "/alunos", to: "aluno#list"
-
   resource :provas
+  resource :alunos
 end

@@ -1,0 +1,28 @@
+<h1>Novo aluno</h1>
+
+<% if @aluno.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@aluno.errors.count, "erro") %> impedem que o aluno seja gravado no banco de dados:</h2>
+
+    <ul>
+      <% @aluno.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_with scope: :aluno, url: '/alunos', local: true do |form| %>
+  <p>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %>
+  </p>
+
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+
+  <p>
+    <%= form.submit 'Salvar novo aluno' %>
+  </p>
+<% end %>
