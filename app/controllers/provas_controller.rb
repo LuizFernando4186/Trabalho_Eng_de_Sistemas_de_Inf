@@ -4,7 +4,7 @@ class ProvasController < ApplicationController
   end
 
   def create
-    @prova = Prova.new(prova_params)
+    @prova = Prova.new(params.require(:prova).permit(:disciplina))
     if @prova.save
       redirect_to action: 'show', id: @prova.id
     else
@@ -16,10 +16,4 @@ class ProvasController < ApplicationController
   def show
     @prova = Prova.find(params[:id])
   end
-
-  private
-  def prova_params
-    params.require(:prova).permit(:disciplina)
-  end
-
 end
