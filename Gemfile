@@ -44,6 +44,8 @@ gem "bootsnap", require: false
 
 gem 'coveralls', require: false
 
+gem 'pg', require: false
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
