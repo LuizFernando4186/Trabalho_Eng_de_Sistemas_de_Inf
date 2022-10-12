@@ -322,7 +322,7 @@ DEPENDENCIES
   simplecov
   simplecov-lcov (~> 0.7.0)
   sprockets-rails
-  sqlite3 (~> 1.5.1)
+  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
