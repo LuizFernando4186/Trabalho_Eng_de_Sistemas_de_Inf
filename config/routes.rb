@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  #root "articles#index"
-  root to: "aluno#list"
-
-
-  post "/aluno", to: "aluno#create"
-  get "/alunos", to: "aluno#list"
+  root 'provas#new'
+  resource :provas
+  resource :alunos
 end
