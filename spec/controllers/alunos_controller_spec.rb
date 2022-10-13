@@ -4,7 +4,7 @@ RSpec.describe Aluno, :type => :request do
 
   describe "Request home page" do
     it "should be successful" do
-      get alunos_path
+      get alunos_path, params: { :id => 1 }
       expect(response).to be_successful
     end
   end
