@@ -1,0 +1,17 @@
+<h1>Todas as provas</h1>
+<table>
+  <tr>
+    <th>Disciplina</th>
+    <th>Inserido em</th>
+  </tr>
+  <% @provas.each do |prova| %>
+    <tr>
+      <td>
+        <%= prova.disciplina %>
+      </td>
+      <td>
+        <%= prova.created_at %>
+      </td>
+    </tr>
+  <% end %>
+</table>

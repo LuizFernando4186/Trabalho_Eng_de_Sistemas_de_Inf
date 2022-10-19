@@ -13,12 +13,16 @@ class AlunosController < ApplicationController
     end
   end
 
+  def all
+    @alunos = Aluno.all
+  end
+
   def show
     @aluno = Aluno.find(params[:id])
   end
 
   private
   def aluno_params
-    params.require(:aluno).permit(:nome, :email)
+    params.require(:aluno).permit(:nome, :email, :nusp)
   end
 end
