@@ -5,7 +5,6 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 #
 /.idea/
-/.ruby-version
 
 # Ignore bundler config.
 /.bundle
