@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Aluno, :type => :request do
+RSpec.describe Aluno, :type => :request do #precisa mudar para controller
 
   describe "Add Aluno" do
     it "Should add a new Aluno" do
