@@ -5,12 +5,12 @@ require 'rails_helper'
 RSpec.describe Professore, :type => :model do
   context "Validar nome do professor" do
     it "seja valido" do
-      professor = Professore.new(nome: 'Marcos Antônio', email: 'professor@usp.br', nusp:'12454546')
+      professor = Professore.new(nome: 'Marcos Antônio', email: 'professor@usp.br', nusp: 12454546)
       expect(professor).to be_valid
     end
 
     it "não seja valido" do 
-      professor = Professore.new(email: 'professor@usp.br', nusp:'12454546')
+      professor = Professore.new(email: 'professor@usp.br', nusp: 12454546)
       expect(professor).to_not be_valid
     end
 
@@ -28,12 +28,12 @@ RSpec.describe Professore, :type => :model do
 
   context "Validar email do professor" do
     it "seja valido" do
-      professor = Professore.new(nome: 'Marcos Antônio', email: 'professor@usp.br', nusp:'12454546')
+      professor = Professore.new(nome: 'Marcos Antônio', email: 'professor@usp.br', nusp: 12454546)
       expect(professor).to be_valid
     end
 
     it "não seja valido" do 
-      professor = Professore.new(nome: 'Marcos Antônio', nusp:'12454546')
+      professor = Professore.new(nome: 'Marcos Antônio', nusp: 12454546)
       expect(professor).to_not be_valid
     end
 
@@ -46,7 +46,7 @@ RSpec.describe Professore, :type => :model do
 
   context "Validar nusp do professor" do
     it "seja valido" do
-      professor = Professore.new(nome: 'Marcos Antônio', email: 'professor@usp.br', nusp:'12454546')
+      professor = Professore.new(nome: 'Marcos Antônio', email: 'professor@usp.br', nusp: 12454546)
       expect(professor).to be_valid
     end
 

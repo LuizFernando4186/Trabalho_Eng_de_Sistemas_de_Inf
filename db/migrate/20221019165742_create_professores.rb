@@ -3,7 +3,7 @@ class CreateProfessores < ActiveRecord::Migration[7.0]
     create_table :professores do |t|
       t.string :nome
       t.string :email
-      t.string :nusp
+      t.integer :nusp
 
       t.timestamps
     end
