@@ -11,7 +11,6 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 
 <ul>
  <li>Camila Felinto Surião</li>
- <li>Danielle Guia de Souza</li>
  <li>José Rafael Rodrigues Nascimento</li>
  <li>Luiz Fernando Conceição dos Santos</li>
  <li>Vinicius Roland Crisci</li>
@@ -23,7 +22,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
  <li>Sistema de Avaliação</li>
  <li>Heroku: https://organizador-esi.herokuapp.com/ </li>
  <li>Pivotal Tracker: https://www.pivotaltracker.com/n/projects/2603037 </li>
- <li>Este projeto tem como objetivo desenvolver um sistema de avaliações em relação a conceitos de DevOps, possuindo questões abertas e fechadas. Visa-se um maior grau automação durante a correção das atividades, conferindo feedback automático aos alunos sempre que possível, além de diminuir o esforço desnecessário de professores.
+ <li>Este projeto tem como objetivo desenvolver um sistema de avaliações de uma disciplina de engenharia, possuindo questões abertas e fechadas. Visa-se um maior grau automação durante a correção das atividades, o objetivo é diminuir o esforço desnecessário de professores.
 </li>
 </ul>
 
