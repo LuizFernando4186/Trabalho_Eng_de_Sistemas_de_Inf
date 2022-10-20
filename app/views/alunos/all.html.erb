@@ -1,0 +1,25 @@
+<h1>Todos os alunos</h1>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Nusp</th>
+    <th>Inserido em</th>
+  </tr>
+  <% @alunos.each do |aluno| %>
+    <tr>
+      <td>
+        <%= aluno.nome %>
+      </td>
+      <td>
+        <%= aluno.email %>
+      </td>
+      <td>
+        <%= aluno.nusp %>
+      </td>
+      <td>
+        <%= aluno.created_at %>
+      </td>
+    </tr>
+  <%end %>
+</table>

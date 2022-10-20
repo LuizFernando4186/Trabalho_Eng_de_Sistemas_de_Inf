@@ -13,6 +13,10 @@ class ProvasController < ApplicationController
     end
   end
 
+  def all
+    @provas = Prova.all
+  end
+
   def show
     @prova = Prova.find(params[:id])
   end
