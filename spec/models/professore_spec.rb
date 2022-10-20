@@ -22,7 +22,7 @@ RSpec.describe Professore, :type => :model do
     it "e retorna não pode ser em branco" do 
     professor = Professore.new(nome: nil)
     professor.valid?
-    expect(professor.errors[:nome]).to include("can't be blank")
+    expect(professor.errors[:nome]).to include("É obrigatório informar o nome!")
     end
   end 
 
@@ -40,7 +40,7 @@ RSpec.describe Professore, :type => :model do
     it "e retorna não pode ser em branco" do 
       professor = Professore.new(email: nil)
       professor.valid?
-      expect(professor.errors[:email]).to include("can't be blank")
+      expect(professor.errors[:email]).to include("É obrigatório informar o email!")
     end
   end 
 
@@ -58,7 +58,7 @@ RSpec.describe Professore, :type => :model do
     it "e retorna não pode ser em branco" do 
     professor = Professore.new(nusp: nil)
     professor.valid?
-    expect(professor.errors[:nusp]).to include("can't be blank")
+    expect(professor.errors[:nusp]).to include("É obrigatório informar o nusp!")
     end
   end 
 

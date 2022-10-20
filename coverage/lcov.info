@@ -64,6 +64,8 @@ end_of_record
 SF:./app/models/professore.rb
 DA:1,1
 DA:2,1
+DA:3,1
+DA:5,1
 end_of_record
 SF:./app/models/prova.rb
 DA:1,1
