@@ -31,6 +31,8 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 <ul>
  <li>Cadastrar aluno;</li>
  <li>Cadastrar prova;</li>
+  <li>Listar alunos;</li>
+ <li>Listar provas;</li>
  <li>Cadastrar professor;</li>
  <li>Permite o aluno realizar a prova de um professor;</li>
 </ul>
