@@ -21,11 +21,15 @@ jobs:
       - name: Run migrations
         run: rails db:migrate RAILS_ENV=test
       
-      - name: Unit Tests
-        run: bundler exec rake
-
-      - name: User Stories Test
-        run: bundler exec cucumber
+      - name: run tests
+        env:
+          RAILS_ENV: test
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+        run: |
+          bundle update --bundler
+          bundle exec rake db:migrate
+          bundle exec rspec spec
+          bundle exec cucumber
       
       - name: Coveralls
         env:
