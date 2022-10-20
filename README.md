@@ -26,6 +26,15 @@
 </li>
 </ul>
 
+<b> Funcionalidades </b>
+<ul>
+ <li>Cadastrar aluno;</li>
+ <li>Cadastrar prova;</li>
+ <li>Cadastrar professor;</li>
+ <li>Permite o aluno realizar a prova de um professor;</li>
+</ul>
+
+
 
 [![Code Climate](https://codeclimate.com/github/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf/badges/gpa.svg)](https://codeclimate.com/github/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf)
 [![Coverage Status](https://coveralls.io/repos/github/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf/badge.svg?branch=main)](https://coveralls.io/github/LuizFernando4186/Trabalho_Eng_de_Sistemas_de_Inf?branch=main)
