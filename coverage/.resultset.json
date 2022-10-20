@@ -9,6 +9,10 @@
         1,
         null
       ],
+      "/myapp/app/helpers/login_helper.rb": [
+        1,
+        null
+      ],
       "/myapp/app/helpers/professors_helper.rb": [
         1,
         null
@@ -110,6 +114,7 @@
       "/myapp/app/models/prova.rb": [
         1,
         1,
+        null,
         null
       ],
       "/myapp/app/controllers/alunos_controller.rb": [
@@ -143,12 +148,10 @@
         null
       ],
       "/myapp/app/controllers/login_controller.rb": [
-        0,
+        1,
+        1,
         null,
-        0,
-        0,
-        null,
-        0
+        null
       ],
       "/myapp/app/controllers/provas_controller.rb": [
         0,
@@ -174,9 +177,15 @@
         0,
         0,
         0
+      ],
+      "/myapp/app/models/login.rb": [
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1666296328
+    "timestamp": 1666308012
   },
   "Cucumber Features": {
     "coverage": {
@@ -219,6 +228,10 @@
         null
       ],
       "/myapp/app/helpers/home_helper.rb": [
+        1,
+        null
+      ],
+      "/myapp/app/helpers/login_helper.rb": [
         1,
         null
       ],
@@ -344,17 +357,22 @@
       "/myapp/app/models/prova.rb": [
         1,
         1,
+        null,
         null
       ],
       "/myapp/app/controllers/login_controller.rb": [
         0,
-        null,
         0,
         0,
-        null,
+        0
+      ],
+      "/myapp/app/models/login.rb": [
+        0,
+        0,
+        0,
         0
       ]
     },
-    "timestamp": 1666296341
+    "timestamp": 1666308025
   }
 }
