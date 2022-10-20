@@ -1,16 +1,16 @@
 class ProfessorsController < ApplicationController
-  before_action :set_professor, only: %i[ show edit update destroy ]
+  before_action :set_professor, only: [:show, :update, :edit, :destroy] 
 
-  # GET /professors or /professors.json
+  #/professors/index - imprime tudo
   def index
-    #@professors = Professor.all
+    @professors = Professor.all
   end
 
-  # GET /professors/1 or /professors/1.json
+  #/professors/1 ou /professors/1.json - imprime um professor
   def show
   end
 
-  # GET /professors/new
+  # /professors/new - cria um professor
   def new
     @professor = Professor.new
   end
@@ -23,46 +23,44 @@ class ProfessorsController < ApplicationController
   def create
     @professor = Professor.new(professor_params)
 
-    respond_to do |format|
-      if @professor.save
-        format.html { redirect_to professor_url(@professor), notice: "Professor was successfully created." }
-        format.json { render :show, status: :created, location: @professor }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
-      end
+    if @professor.save
+      flash[:notice] = "Professor criado com sucesso!."
+      redirect_to action: :show, id: @professor.id
+
+    else
+      flash[:notice] = "Erro ao criar professor!."
+      render :new
     end
   end
 
-  # PATCH/PUT 
+  # atualizar professor
   def update
-   # respond_to do |format|
-    #  if @professor.update(professor_params)
-     #   format.html { redirect_to professor_url(@professor), notice: "Professor was successfully updated." }
-      #  format.json { render :show, status: :ok, location: @professor }
-      #else
-       # format.html { render :edit, status: :unprocessable_entity }
-        #format.json { render json: @professor.errors, status: :unprocessable_entity }
-      #end
-    #end
+    if @professor.update(professor_params)
+      flash[:notice] = "Professor atualizado com sucesso!."
+      redirect_to action: :show, id: @professor.id
+    else
+      flash[:notice] = "Professor não atualizado com sucesso!."
+      render :edit
+    end
   end
 
   # DELETE 
   def destroy
-    #@professor.destroy
+    @professor.destroy
 
-    #respond_to do |format|
-     # format.html { redirect_to professors_url, notice: "Professor was successfully destroyed." }
-      #format.json { head :no_content }
-    #end
+    flash[:notice] = "Professor excluído com sucesso!."
+    redirect_to action: :index
   end
 
   private
     def set_professor
+      #dentro de Professor tem varios metodos e neste caso tem o find
+      #busca o professor e coloca na variavel @professor
       @professor = Professor.find(params[:id])
     end
 
     def professor_params
+      #tratar os parametros, pedindo o nome, email e nusp
       params.require(:professor).permit(:nome, :email, :nusp)
     end
 end
