@@ -29,6 +29,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 
 <b> Funcionalidades </b>
 <ul>
+ <li>Login;<li>
  <li>Cadastrar aluno;</li>
  <li>Cadastrar prova;</li>
   <li>Listar alunos;</li>
