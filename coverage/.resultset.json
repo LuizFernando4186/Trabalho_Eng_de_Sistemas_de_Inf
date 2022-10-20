@@ -9,6 +9,10 @@
         1,
         null
       ],
+      "/myapp/app/helpers/professores_helper.rb": [
+        1,
+        null
+      ],
       "/myapp/app/models/aluno.rb": [
         1,
         1,
@@ -21,8 +25,89 @@
         1,
         null
       ],
+      "/myapp/app/models/professore.rb": [
+        1,
+        1,
+        null
+      ],
       "/myapp/app/models/prova.rb": [
         1,
+        1,
+        null
+      ],
+      "/myapp/app/controllers/professores_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/myapp/app/controllers/application_controller.rb": [
         1,
         null
       ],
@@ -52,9 +137,9 @@
         null,
         null
       ],
-      "/myapp/app/controllers/application_controller.rb": [
-        1,
-        null
+      "/myapp/app/controllers/login_controller.rb": [
+        0,
+        0
       ],
       "/myapp/app/controllers/provas_controller.rb": [
         0,
@@ -78,7 +163,7 @@
         0
       ]
     },
-    "timestamp": 1665670830
+    "timestamp": 1666225260
   },
   "Cucumber Features": {
     "coverage": {
@@ -120,6 +205,10 @@
         1,
         null
       ],
+      "/myapp/app/helpers/professores_helper.rb": [
+        1,
+        null
+      ],
       "/myapp/app/models/aluno.rb": [
         1,
         1,
@@ -157,8 +246,89 @@
         1,
         1,
         null
+      ],
+      "/myapp/app/controllers/login_controller.rb": [
+        0,
+        0
+      ],
+      "/myapp/app/controllers/professores_controller.rb": [
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/myapp/app/models/professore.rb": [
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1665670851
+    "timestamp": 1666225270
   }
 }
