@@ -1,3 +1,0 @@
-class ProfessoresController < ApplicationController
-  
-end

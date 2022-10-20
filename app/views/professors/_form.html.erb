@@ -1,10 +1,10 @@
-<%= form_with(model: professore) do |form| %>
-  <% if professore.errors.any? %>
+<%= form_with(model: professor) do |form| %>
+  <% if professor.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(professore.errors.count, "error") %> prohibited this professore from being saved:</h2>
+      <h2><%= pluralize(professor.errors.count, "error") %> prohibited this professor from being saved:</h2>
 
       <ul>
-        <% professore.errors.each do |error| %>
+        <% professor.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -23,10 +23,10 @@
 
   <div>
     <%= form.label :nusp, style: "display: block" %>
-    <%= form.text_field :nusp %>
+    <%= form.number_field :nusp %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit 'Salvar novo professor'%>
   </div>
 <% end %>
