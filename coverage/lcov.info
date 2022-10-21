@@ -91,12 +91,6 @@ SF:./app/models/application_record.rb
 DA:1,2
 DA:2,2
 end_of_record
-SF:./app/models/login.rb
-DA:1,0
-DA:2,0
-DA:3,0
-DA:4,0
-end_of_record
 SF:./app/models/professor.rb
 DA:1,2
 DA:2,2

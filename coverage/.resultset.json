@@ -177,15 +177,9 @@
         0,
         0,
         0
-      ],
-      "/myapp/app/models/login.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1666308012
+    "timestamp": 1666309821
   },
   "Cucumber Features": {
     "coverage": {
@@ -365,14 +359,8 @@
         0,
         0,
         0
-      ],
-      "/myapp/app/models/login.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1666308025
+    "timestamp": 1666309833
   }
 }
