@@ -1,0 +1,57 @@
+<%= form_with(model: questao) do |form| %>
+  <% if questao.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(questao.errors.count, "error") %> prohibited this questao from being saved:</h2>
+
+      <ul>
+        <% questao.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :grupo_questao, style: "display: block" %>
+    <%= form.text_field :grupo_questao %>
+  </div>
+
+  <div>
+    <%= form.label :tipo, style: "display: block" %>
+    <%= form.text_field :tipo %>
+  </div>
+
+  <div>
+    <%= form.label :titulo, style: "display: block" %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div>
+    <%= form.label :enunciado, style: "display: block" %>
+    <%= form.text_area :enunciado %>
+  </div>
+
+  <div>
+    <%= form.label :total_alternativas, style: "display: block" %>
+    <%= form.number_field :total_alternativas %>
+  </div>
+
+  <div>
+    <%= form.label :alternativas_aluno, style: "display: block" %>
+    <%= form.number_field :alternativas_aluno %>
+  </div>
+
+  <div>
+    <%= form.label :alternativas, style: "display: block" %>
+    <%= form.text_area :alternativas %>
+  </div>
+
+  <div>
+    <%= form.label :alternativa_correta, style: "display: block" %>
+    <%= form.number_field :alternativa_correta %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
