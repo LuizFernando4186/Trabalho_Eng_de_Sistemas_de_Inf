@@ -1,5 +1,5 @@
 class QuestaosController < ApplicationController
-  before_action :set_questao, only: %i[ show edit update destroy ]
+  before_action :set_questao, only: [:show, :edit, :update, :destroy]
 
   # GET /questaos or /questaos.json
   def index
