@@ -6,8 +6,10 @@ class AlunosController < ApplicationController
   def create
     @aluno = Aluno.new(aluno_params)
     if @aluno.save
+      flash[:notice] = "Aluno criado com sucesso!."
       redirect_to action: 'show', id: @aluno.id
     else
+      flash[:notice] = "Erro ao criar aluno!."
       render :new, status: :unprocessable_entity, content_type: "text/html"
       headers["Content-Type"] = "text/html"
     end
@@ -24,5 +26,6 @@ class AlunosController < ApplicationController
   private
   def aluno_params
     params.require(:aluno).permit(:nome, :email, :nusp)
+
   end
 end

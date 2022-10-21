@@ -17,15 +17,40 @@
         1,
         null
       ],
-      "/myapp/app/models/aluno.rb": [
+      "/myapp/app/controllers/alunos_controller.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        1,
+        null,
         1,
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
         null
       ],
-      "/myapp/app/models/application_record.rb": [
-        1,
+      "/myapp/app/controllers/application_controller.rb": [
         1,
         null
       ],
@@ -97,7 +122,15 @@
         null,
         null
       ],
-      "/myapp/app/controllers/application_controller.rb": [
+      "/myapp/app/models/aluno.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/myapp/app/models/application_record.rb": [
+        1,
         1,
         null
       ],
@@ -117,24 +150,8 @@
         null,
         null
       ],
-      "/myapp/app/controllers/alunos_controller.rb": [
+      "/myapp/app/controllers/login_controller.rb": [
         1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        0,
         null,
         null,
         1,
@@ -142,16 +159,26 @@
         null,
         null,
         1,
+        null,
+        null,
         1,
-        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
         null,
         null
       ],
-      "/myapp/app/controllers/login_controller.rb": [
-        1,
-        1,
+      "/myapp/app/controllers/home_controller.rb": [
+        0,
         null,
-        null
+        0,
+        0,
+        null,
+        0
       ],
       "/myapp/app/controllers/provas_controller.rb": [
         0,
@@ -179,7 +206,7 @@
         0
       ]
     },
-    "timestamp": 1666309821
+    "timestamp": 1666375489
   },
   "Cucumber Features": {
     "coverage": {
@@ -193,7 +220,9 @@
         5,
         5,
         2,
+        2,
         null,
+        3,
         3,
         3,
         null,
@@ -210,6 +239,7 @@
         1,
         1,
         5,
+        null,
         null,
         null
       ],
@@ -354,13 +384,37 @@
         null,
         null
       ],
+      "/myapp/app/controllers/home_controller.rb": [
+        0,
+        null,
+        0,
+        0,
+        null,
+        0
+      ],
       "/myapp/app/controllers/login_controller.rb": [
         0,
+        null,
+        null,
         0,
         0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
         0
       ]
     },
-    "timestamp": 1666309833
+    "timestamp": 1666375668
   }
 }

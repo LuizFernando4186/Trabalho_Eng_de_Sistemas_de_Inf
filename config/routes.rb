@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'alunos/all'
   get 'provas/all'
   get 'login/index'
+  get 'home/index'
 end

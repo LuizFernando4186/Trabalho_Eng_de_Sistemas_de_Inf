@@ -1,14 +1,26 @@
 require 'rails_helper'
 
-RSpec.describe Aluno, :type => :request do #precisa mudar para controller
+#primeiro falhe
+#segundo fazer passar
+#terceiro refatorar
 
-  describe "Add Aluno" do
-    it "Should add a new Aluno" do
-      user = Aluno.create(nome: "Teste RSPEC", email: "teste-rspec@gmail.com")
-      get alunos_path, params: { :id => 1 }
-      expect(response).to be_successful
-      expect(response.body).to include("Teste RSPEC")
+RSpec.describe AlunosController, :type => :controller do
+
+      context "Add Aluno" do 
+      let!(:params) {
+          { nome: 'aluno', email: 'aluno@usp.br', nusp: 12456554 }
+      }
+      it "criar um novo aluno" do
+          post :create, params: { aluno: params }
+          expect(flash[:notice]).to eq("Aluno criado com sucesso!.")
+          expect(response).to redirect_to(action: :show, id: assigns(:aluno).id)
+      end
+
+      it "não criou um novo aluno" do
+          params = { nome: 'aluno' }
+          post :create, params: { aluno: params }
+          expect(flash[:notice]).to eq("Erro ao criar aluno!.")
+          expect(response).to render_template("new")
+      end
     end
-  end
-
 end
