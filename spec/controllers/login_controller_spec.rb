@@ -29,5 +29,12 @@ RSpec.describe LoginController, :type => :controller do
         end
     end
 
+    context "Destroy" do 
+        it "espero deslogar o usuário" do
+            delete :destroy
+            expect(flash[:notice]).to eq("Logged out")
+        end
+    end
+
 
 end
