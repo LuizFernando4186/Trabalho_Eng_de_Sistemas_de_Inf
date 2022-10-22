@@ -22,7 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_20_055405) do
   create_table "professors", force: :cascade do |t|
     t.string "nome"
     t.string "email"
-    t.integer "nusp"
+    t.integer "nusp", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

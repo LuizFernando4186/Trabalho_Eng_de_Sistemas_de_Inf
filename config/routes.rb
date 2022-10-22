@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :professors
-  root 'login#index'
+  root to: 'home#index'
   resource :provas
   resource :alunos
 
   get 'alunos/all'
   get 'provas/all'
-  get 'login/index'
+  get 'sign_in', to: "login#index"
+  post 'sign_in', to: "login#create"
+  delete 'logout', to: "login#destroy"
 end

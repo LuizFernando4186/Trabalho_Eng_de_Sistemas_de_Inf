@@ -24,6 +24,7 @@ class ProfessorsController < ApplicationController
     @professor = Professor.new(professor_params)
 
     if @professor.save
+      session[:user_id] = @professor.id
       flash[:notice] = "Professor criado com sucesso!."
       redirect_to action: :show, id: @professor.id
 
