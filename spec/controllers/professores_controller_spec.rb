@@ -1,5 +1,9 @@
 require 'rails_helper'
 
+#primeiro falhe
+#segundo fazer passar
+#terceiro refatorar
+
 RSpec.describe ProfessorsController, :type => :controller do
 
     context "GET #index" do

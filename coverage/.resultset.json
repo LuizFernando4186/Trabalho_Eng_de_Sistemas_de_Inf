@@ -54,6 +54,29 @@
         1,
         null
       ],
+      "/myapp/app/controllers/login_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
       "/myapp/app/controllers/professors_controller.rb": [
         1,
         1,
@@ -69,7 +92,7 @@
         null,
         null,
         1,
-        2,
+        3,
         null,
         null,
         null,
@@ -81,6 +104,7 @@
         2,
         null,
         2,
+        1,
         1,
         1,
         null,
@@ -150,28 +174,6 @@
         null,
         null
       ],
-      "/myapp/app/controllers/login_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
       "/myapp/app/controllers/home_controller.rb": [
         0,
         null,
@@ -206,7 +208,7 @@
         0
       ]
     },
-    "timestamp": 1666375489
+    "timestamp": 1666421490
   },
   "Cucumber Features": {
     "coverage": {
@@ -304,6 +306,7 @@
         5,
         1,
         1,
+        1,
         null,
         null,
         4,
@@ -384,6 +387,29 @@
         null,
         null
       ],
+      "/myapp/app/controllers/login_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
       "/myapp/app/controllers/home_controller.rb": [
         0,
         null,
@@ -391,30 +417,8 @@
         0,
         null,
         0
-      ],
-      "/myapp/app/controllers/login_controller.rb": [
-        0,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        0
       ]
     },
-    "timestamp": 1666375668
+    "timestamp": 1666421501
   }
 }

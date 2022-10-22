@@ -1,20 +1,21 @@
 class LoginController < ApplicationController
  
-
   def index
-    render('login/index')
   end
 
-  def menu
+  def create
+    @professor = Professor.find_by(nusp: params[:nusp])
+
+    if @professor.present?
+      redirect_to root_path, notice: "Logado com sucesso!."
+    else 
+      flash[:alert] = "Nusp inválido!."
+    end
   end
 
-  def login 
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_path, notice: "Logged out"
   end
-
-  def logout
-  end
-
-
-
 
 end
