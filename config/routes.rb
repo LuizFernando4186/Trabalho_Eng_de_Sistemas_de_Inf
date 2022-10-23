@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resource :provas
   resource :alunos
+  resources :questaos
 
   get 'alunos/all'
   get 'provas/all'
