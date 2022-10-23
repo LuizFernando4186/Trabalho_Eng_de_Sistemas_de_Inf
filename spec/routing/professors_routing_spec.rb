@@ -18,7 +18,6 @@ RSpec.describe ProfessorsController, type: :routing do
       expect(get: "/professors/1/edit").to route_to("professors#edit", id: "1")
     end
 
-
     it "routes to #create" do
       expect(post: "/professors").to route_to("professors#create")
     end

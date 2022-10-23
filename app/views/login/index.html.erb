@@ -1,15 +1,18 @@
-<body>
+<h1 id="login">Sign In</h1>
 
-<div class="d-flex align-items-center justify-content-center">
 
-    <h1>Tela de Login</h1>
+<%= form_with url: sign_in_path do |form| %>
+  
+  
+      <div class="mb-3">
+      <%= form.label :nusp %>
+      <%= form.text_field :nusp, class: "form-control", placeholder: "11840300" %>
+      </div>
+     
 
-</div>
+      <div class="mb-3">
+      <%= form.submit "entrar", class: "btn btn-primary" %>
+      </div>
 
-<div class="d-flex align-items-center justify-content-center">
 
- <%= render partial: "shared/navabar" %>
-
-</div>
-
-</body>
+<% end %>
