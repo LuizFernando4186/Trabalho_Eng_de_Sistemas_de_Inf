@@ -330,7 +330,7 @@ DEPENDENCIES
   rails (~> 7.0.4)
   rails-controller-testing
   rspec-rails
-  selenium-webdriver
+  selenium-webdriver (~> 4.0)
   simplecov
   simplecov-lcov
   sprockets-rails
