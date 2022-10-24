@@ -16,9 +16,13 @@
     <%= form.text_field :grupo_questao %>
   </div>
 
-  <div>
-    <%= form.label :tipo, style: "display: block" %>
-    <%= form.text_field :tipo %>
+  <div class="field">
+    <% # Tipo de questão = aberta / fechada (botão de seleção) %>
+    <%= form.label :tipo %><br />
+    <%= form.label :tipo, "Aberta", value: "true"  %>
+    <%= form.radio_button :tipo, true %>
+    <%= form.label :tipo, "Fechada", value: "false" %>
+    <%= form.radio_button :tipo, false, checked: true %>     
   </div>
 
   <div>
