@@ -5,8 +5,9 @@ class LoginController < ApplicationController
 
   def create
     @professor = Professor.find_by(nusp: params[:nusp])
+    @aluno = Aluno.find_by(nusp: params[:nusp])
 
-    if @professor.present?
+    if @professor.present? or @aluno.present?
       redirect_to root_path, notice: "Logado com sucesso!."
     else 
       flash[:alert] = "Nusp inválido!."
