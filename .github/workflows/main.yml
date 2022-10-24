@@ -1,7 +1,6 @@
 name: Trabalho_Eng_Sistemas_Inf
 
 on: [push, pull_request]
-branches: [main]
 
 jobs:
   
