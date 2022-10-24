@@ -7,7 +7,7 @@ class CreateQuestaos < ActiveRecord::Migration[7.0]
       t.text :enunciado
       t.integer :total_alternativas
       t.integer :alternativas_aluno
-      t.text :alternativas, array: true, default: [].to_yaml
+      t.text :alternativas #, array: true, default: [].to_yaml da erro no deploy
       t.integer :alternativa_correta
 
       t.timestamps
