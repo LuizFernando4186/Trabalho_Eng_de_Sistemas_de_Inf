@@ -8,7 +8,7 @@ class LoginController < ApplicationController
     @aluno = Aluno.find_by(nusp: params[:nusp])
 
     if @professor.present? or @aluno.present?
-      redirect_to root_path, notice: "Logado com sucesso!."
+      redirect_to home_path, notice: "Logado com sucesso!."
     else 
       flash[:alert] = "Nusp inválido!."
     end

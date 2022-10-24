@@ -25,5 +25,5 @@ Então('vou para a página de login') do
 end
 
 Então('devo ser direcionado para a área de home') do
-    expect(current_path).to eq("/")
+    expect(current_path).to eq(home_path)
 end
