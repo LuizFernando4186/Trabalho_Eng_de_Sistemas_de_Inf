@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resource :provas
   resource :alunos
-  resources :questoes_fechadas
+  
+  resources :questoes_fechadas do
+    resources :alternativas
+  end
 
   get 'alunos/all'
   get 'provas/all'

@@ -37,8 +37,12 @@
   </div>
 
   <div>
-    <%= form.label :alternativas, style: "display: block" %>
-    <%= form.text_area :alternativas %>
+    <%= form.label :alternativas%>
+    <%= form.fields_for :alternativas do |alternativa| %>
+      <%= alternativa.label :alternativa, style: "display: block" %>
+      <%= alternativa.text_field :alternativa %>
+      <%= alternativa.check_box :correta %>
+    <% end %>
   </div>
 
   <div>

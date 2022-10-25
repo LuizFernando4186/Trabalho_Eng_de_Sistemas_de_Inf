@@ -1,6 +1,6 @@
 class QuestaoFechada < ApplicationRecord
 
-    has_many :alternativas
+    has_many :alternativas, dependent: :destroy
 
     validates :grupo_questao, presence: { message: "É obrigatório informar o grupo da questão!" }
     validates :titulo, presence: { message: "É obrigatório informar o título da questão!" }
@@ -9,5 +9,7 @@ class QuestaoFechada < ApplicationRecord
     validates :alternativas_aluno, presence: { message: "É obrigatório informar o total de alternativas que o aluno deve marcar!" }
     validates :alternativas, presence: { message: "É obrigatório informar as alternativas da questão!" }
     validates :alternativa_correta, presence: { message: "É obrigatório informar a alternativa correta da questão!" }
+
+    accepts_nested_attributes_for :alternativas
 
 end

@@ -13,6 +13,7 @@ class QuestoesFechadasController < ApplicationController
   # GET /questaos/new
   def new
     @questao_fechada = QuestaoFechada.new
+    
   end
 
   # GET /questaos/1/edit
@@ -65,6 +66,6 @@ class QuestoesFechadasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def questao_fechada_params
-      params.require(:questao_fechada).permit(:grupo_questao, :titulo, :enunciado, :total_alternativas, :alternativas_aluno, :alternativas, :alternativa_correta)
+      params.require(:questao_fechada).permit(:grupo_questao, :titulo, :enunciado, :total_alternativas, :alternativas_aluno, :alternativa_correta, alternativas_attributes: [:alternativa, :correta])
     end
 end
