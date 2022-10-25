@@ -1,4 +1,4 @@
-class Questao < ApplicationRecord
+class QuestaoFechada < ApplicationRecord
 
     validates :grupo_questao, presence: { message: "É obrigatório informar o grupo da questão!" }
     validates :titulo, presence: { message: "É obrigatório informar o título da questão!" }
