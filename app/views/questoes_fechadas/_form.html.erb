@@ -16,15 +16,6 @@
     <%= form.text_field :grupo_questao %>
   </div>
 
-  <div class="field">
-    <% # Tipo de questão = aberta / fechada (botão de seleção) %>
-    <%= form.label "Tipo" %> <br>
-    <%= radio_button_tag :tipo_questao, "aberta" %>
-    <%= label_tag :tipo_questao, "Aberta" %>
-    <%= radio_button_tag :tipo_questao, "fechada" %>
-    <%= label_tag :tipo_questao, "Fechada" %>
-  </div>
-
   <div>
     <%= form.label :titulo, style: "display: block" %>
     <%= form.text_field :titulo %>
@@ -36,10 +27,8 @@
   </div>
 
   <div>
-    <% # Opções de resposta (apenas para questões fechadas) %>
-
-
-
+    <%= form.label :total_alternativas, style: "display: block" %>
+    <%= form.number_field :total_alternativas %>
   </div>
 
   <div>
