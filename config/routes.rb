@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :alternativas
   resources :professors
   root to: 'home#index'
   resource :provas
