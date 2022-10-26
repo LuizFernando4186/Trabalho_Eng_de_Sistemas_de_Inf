@@ -37,15 +37,27 @@
   </div>
 
   <div>
-    <%= form.label :alternativas%>
-    <%= form.fields_for :alternativas do |alternativa| %>
-      <%= alternativa.label :alternativa, style: "display: block" %>
-      <%= alternativa.text_field :alternativa %>
-      <%= alternativa.check_box :correta %>
-    <% end %>
-  </div>
-
-  <div>
     <%= form.submit %>
   </div>
 <% end %>
+
+
+<script>
+
+const total_alternativas = document.getElementById("questao_fechada_total_alternativas");
+
+total_alternativas.addEventListener("change", function handleChange(event) {
+  
+  if (event.target.value == 0) {
+    alert("O total de alternativas deve ser maior que zero!");
+    event.target.value = 1;
+    return;
+  }
+
+  total_alternativas.value = event.target.value;
+  console.log(total_alternativas.value);
+  
+});
+
+
+</script>

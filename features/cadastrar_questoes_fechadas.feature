@@ -6,7 +6,7 @@ Para que eu possa realizar uma prova de uma disciplina
 Eu quero cadastrar uma questão no banco de questões
 
 
-Cenário: Cadastrar uma questão de múltipla escolha
+Cenário: Cadastrar uma questão de múltipla escolha corretamente
 Dado que eu estou na tela de cadastro de uma questão fechada
 Quando preencho o campo "Grupo da Questão" com "ESI"
 E preencho o campo "Título" com "Questão 2"
@@ -37,4 +37,4 @@ E preencho o campo "Alternativa 3" com "Executar"
 E preencho o campo "Alternativa 4" com "Documentar"
 E preencho o campo "Alternativa 5" com "Gerenciar"
 E clico em "Salvar"
-Então deveria ver a mensagem de erro "Alternativa correta não informada" na página de prova
+Então deveria ver a mensagem de erro "É obrigatório informar a alternativa correta da questão!" na página de prova
