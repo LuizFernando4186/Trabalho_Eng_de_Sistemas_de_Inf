@@ -36,14 +36,61 @@
     <%= form.number_field :alternativas_aluno %>
   </div>
 
+  <div id="alternativas">
+    <p> Descrições das alternativas </p>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
 <% end %>
 
 
+
 <script>
 
+function limparAlternativas(div){
+
+  try{
+    console.log(`Limpando alternativas da div ${div.id}`)
+    while (div.hasChildNodes()) {
+      div.removeChild(div.firstChild)
+    }
+    div.remove()
+    console.log('Limpeza de alternativas concluida com sucesso')
+  }
+  catch(err){
+    console.log(err)
+  }
+
+}
+
+
+function createAlternativas(quantidade){
+
+  var parent = document.getElementById("alternativas")
+  var div = document.createElement("div")
+  div.setAttribute("id", "alternativas-descricoes")
+  console.log(`Criando ${quantidade} alternativas`)
+  
+  for (let i = 0; i < quantidade; i++){
+
+    var input_box = document.createElement("input")
+    input_box.type = "text"
+    div.appendChild(input_box)
+    div.appendChild(document.createElement("br"))
+    console.log(`Adicionando ${input_box} na div ${div}`)
+
+  }
+
+  parent.appendChild(div)
+  console.log(`Adicionando ${div} no parent ${parent}`)
+
+}
+
+
+
+// Atualização dos valores
 const total_alternativas = document.getElementById("questao_fechada_total_alternativas");
 
 total_alternativas.addEventListener("change", function handleChange(event) {
@@ -55,6 +102,8 @@ total_alternativas.addEventListener("change", function handleChange(event) {
   }
 
   total_alternativas.value = event.target.value;
+  limparAlternativas(document.getElementById("alternativas-descricoes"))
+  createAlternativas(total_alternativas.value)
   console.log(total_alternativas.value);
   
 });
