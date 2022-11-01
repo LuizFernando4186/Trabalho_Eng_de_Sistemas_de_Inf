@@ -52,18 +52,37 @@
 function limparAlternativas(div){
 
   try{
-    console.log(`Limpando alternativas da div ${div.id}`)
     while (div.hasChildNodes()) {
       div.removeChild(div.firstChild)
     }
     div.remove()
-    console.log('Limpeza de alternativas concluida com sucesso')
   }
   catch(err){
     console.log(err)
   }
 
 }
+
+
+function criarAlternativa(id){
+
+  var div = document.createElement("alternativa-" + id)
+  var botaoSelecao = document.createElement("input")
+  var descricao_alternativa = document.createElement("input")
+  
+  botaoSelecao.setAttribute("type", "radio")
+  botaoSelecao.setAttribute("name", "alternativa-selecionada")
+  botaoSelecao.setAttribute("id", id) 
+  descricao_alternativa.type = "text"
+
+  div.appendChild(botaoSelecao)
+  div.appendChild(descricao_alternativa)
+  div.appendChild(document.createElement("br"))
+
+  return div
+
+}
+
 
 
 function createAlternativas(quantidade){
@@ -74,17 +93,10 @@ function createAlternativas(quantidade){
   console.log(`Criando ${quantidade} alternativas`)
   
   for (let i = 0; i < quantidade; i++){
-
-    var input_box = document.createElement("input")
-    input_box.type = "text"
-    div.appendChild(input_box)
-    div.appendChild(document.createElement("br"))
-    console.log(`Adicionando ${input_box} na div ${div}`)
-
+    div.appendChild(criarAlternativa(i))
   }
 
   parent.appendChild(div)
-  console.log(`Adicionando ${div} no parent ${parent}`)
 
 }
 

@@ -7,7 +7,6 @@ class QuestaoFechada < ApplicationRecord
     validates :enunciado, presence: { message: "É obrigatório informar o enunciado da questão!" }
     validates :total_alternativas, presence: { message: "É obrigatório informar o total de alternativas da questão!" }
     validates :alternativas_aluno, presence: { message: "É obrigatório informar o total de alternativas que o aluno deve marcar!" }
-    validates :alternativas, presence: { message: "É obrigatório informar as alternativas da questão!" }
     validates :alternativa_correta, presence: { message: "É obrigatório informar a alternativa correta da questão!" }
 
     accepts_nested_attributes_for :alternativas

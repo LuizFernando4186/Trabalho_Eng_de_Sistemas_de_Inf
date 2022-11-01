@@ -1,6 +1,6 @@
 class Alternativa < ApplicationRecord
   
-  before_action :get_questao, only: [:new, :create, :edit, :update, :destroy]
+  before_commit :get_questao, only: [:new, :create, :edit, :update, :destroy]
   belongs_to :questao_fechada
 
   validates :alternativa, presence: { message: "É obrigatório informar a descrição da alternativa!" }
