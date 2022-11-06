@@ -10,7 +10,15 @@ RSpec.describe LoginController, :type => :controller do
         let(:professor) { create(:professor) }
         it "espero logar com sucesso" do
             post :create, params: {nusp: professor.nusp }
-            expect(flash[:notice]).to eq("Logado com sucesso!.")
+            expect(flash[:notice]).to eq("Professor Logado com sucesso!.")
+        end
+    end
+
+    context "Logando com sucesso" do 
+        let(:aluno) { create(:aluno) }
+        it "espero logar com sucesso" do
+            post :create, params: {nusp: aluno.nusp }
+            expect(flash[:notice]).to eq("Aluno Logado com sucesso!.")
         end
     end
 

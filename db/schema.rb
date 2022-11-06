@@ -49,7 +49,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_05_172039) do
     t.text "enunciado"
     t.integer "total_alternativas"
     t.integer "alternativas_aluno"
-    t.text "alternativas"
+    t.text "alternativas", default: "--- []\n"
     t.integer "alternativa_correta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
