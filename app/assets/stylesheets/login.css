@@ -52,3 +52,14 @@ img {
     text-align: center;
     margin-bottom: 5%;
 }
+
+/*menores que 480px = celular*/
+@media (max-width: 480px) {
+    .button {
+        font-size: 18px;
+    }
+
+    .button:hover {
+        font-size: 24px;
+    }
+}

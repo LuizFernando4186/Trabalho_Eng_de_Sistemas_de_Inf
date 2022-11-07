@@ -10,7 +10,7 @@ class LoginController < ApplicationController
     if @professor.present? 
       redirect_to home_professor_path, notice: "Professor Logado com sucesso!."
     elsif @aluno.present?
-      redirect_to home_aluno_path, notice: "Aluno Logado com sucesso!."
+      redirect_to home_aluno_path, notice: "Aluno Logado com sucesso!." 
     else 
       flash[:alert] = "Nusp inválido!."
     end
