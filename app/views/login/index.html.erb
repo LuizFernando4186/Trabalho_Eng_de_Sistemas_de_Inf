@@ -1,18 +1,32 @@
-<h1 id="login">Sign In</h1>
+
+<link rel="stylesheet" type="text/css" href="/assets/login.css"/>
 
 
+<%= render partial: "shared/navabar" %>
+
+
+<main>
+
+<div class="img">
+      <img src="/assets/iStudy-qualidade.png">
+</div>
+
+<div class = "div_central">
 <%= form_with url: sign_in_path do |form| %>
   
   
       <div class="mb-3">
       <%= form.label :nusp %>
-      <%= form.text_field :nusp, class: "form-control", placeholder: "11840300" %>
+      <%= form.text_field :nusp, class: "form-control", placeholder: "Exemplo: 11840300" %>
       </div>
      
 
-      <div class="mb-3">
-      <%= form.submit "entrar", class: "btn btn-primary" %>
+      <div class="mb-3 div_button">
+      <%= form.submit "entrar", class: "button" %>
       </div>
 
-
 <% end %>
+
+</div>
+
+</main>

@@ -24,6 +24,10 @@ Então('vou para a página de login') do
     visit sign_in_path
 end
 
-Então('devo ser direcionado para a área de home') do
-    expect(current_path).to eq(home_path)
+Então('devo ser direcionado para a área de home de aluno') do
+    expect(current_path).to eq(home_aluno_path)
+end
+
+Então('devo ser direcionado para a área de home de professor') do
+    expect(current_path).to eq(home_professor_path)
 end

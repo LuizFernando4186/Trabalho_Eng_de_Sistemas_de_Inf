@@ -1,0 +1,65 @@
+main {
+    margin: 10%;
+}
+
+#login {
+    text-align: center;
+    color:#086788;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.div_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    background: #086788;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
+.button {
+    width: 15vw;
+    height: 7vh;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    background: #086788;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FFF1D0;
+    border: #FFF1D0;
+}
+
+.button:hover {
+    font-size: 60px;
+}
+
+img {
+    width: 30%;
+    height: 30%;
+}
+
+.img {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/*menores que 480px = celular*/
+@media (max-width: 480px) {
+    .button {
+        font-size: 18px;
+    }
+
+    .button:hover {
+        font-size: 24px;
+    }
+}

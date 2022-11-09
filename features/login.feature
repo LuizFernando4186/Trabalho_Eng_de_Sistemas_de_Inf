@@ -23,7 +23,7 @@ Cenário: Professor realizar o login com sucesso
    Dado que eu tenho um usuário com cadastro
    |nusp| 11840300|
    Quando eu faço login
-   Então devo ser direcionado para a área de home
+   Então devo ser direcionado para a área de home de professor
 
 Cenário: Aluno realizar o login com sucesso
    Dado que estou na página de cadastro de aluno
@@ -36,4 +36,4 @@ Cenário: Aluno realizar o login com sucesso
    Dado que eu tenho um usuário com cadastro
    |nusp| 11847700|
    Quando eu faço login
-   Então devo ser direcionado para a área de home
+   Então devo ser direcionado para a área de home de aluno

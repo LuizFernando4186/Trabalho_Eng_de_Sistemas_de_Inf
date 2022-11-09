@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="/assets/home-professor.css"/>
+
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Menu Professor</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "Cadastrar Prova", new_provas_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Cadastrar Questões", new_questao_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to "Listagem de Alunos", alunos_all_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Listagem de Provas", provas_all_path, class: "nav-link" %>
+        </li>
+         <li class="nav-item">
+          <%= button_to "Sair", logout_path, method: :delete, class: "nav-link button-sair" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<h1>HomeProfessor#index</h1>
+<p>Find me in app/views/home_professor/index.html.erb</p>

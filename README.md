@@ -10,8 +10,6 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
 <b>Integrantes:</b> 
 
 <ul>
- <li>Camila Felinto Surião</li>
- <li>Danielle Guia de Souza</li>
  <li>José Rafael Rodrigues Nascimento</li>
  <li>Luiz Fernando Conceição dos Santos</li>
  <li>Vinicius Roland Crisci</li>
@@ -36,6 +34,7 @@ Desenvolver um SaaS aplicando as melhores práticas de Engenharia de Software
  <li>Listar provas;</li>
  <li>Cadastrar professor;</li>
  <li>Permite o aluno realizar a prova de um professor;</li>
+ <li>Permitir o professor criar uma prova;</li>
 </ul>
 
 

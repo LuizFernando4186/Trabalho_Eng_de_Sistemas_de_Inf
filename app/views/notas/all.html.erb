@@ -1,0 +1,21 @@
+<h1>Todas as notas</h1>
+<table>
+  <tr>
+    <th>Nota</th>
+    <th>Prova</th>
+    <th>Inserido em</th>
+  </tr>
+  <% @notas.each do |nota| %>
+    <tr>
+      <td>
+        <%= nota.nota %>
+      </td>
+      <td>
+        <%= nota.prova.disciplina %>
+      </td>
+      <td>
+        <%= nota.created_at %>
+      </td>
+    </tr>
+  <% end %>
+</table>
