@@ -1,0 +1,28 @@
+<h1>Nota da prova</h1>
+
+<% if @nota.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@nota.errors.count, "erro") %> impedem que a nota seja gravada no banco de dados:</h2>
+
+    <ul>
+      <% @nota.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_with scope: :nota, url: '/notas', local: true do |form| %>
+  <p>
+    <%= form.label :prova_id %><br>
+    <%= form.text_field :prova_id %>
+  </p>
+
+  <p>
+    <%= form.label :nota %><br>
+    <%= form.text_field :nota %>
+  </p>
+
+  <p>
+    <%= form.submit 'Salvar nota da prova' %>
+  </p>
+<% end %>
