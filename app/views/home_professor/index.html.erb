@@ -1,6 +1,22 @@
 <link rel="stylesheet" type="text/css" href="/assets/home-professor.css"/>
 
 
+<header class="header">
+
+    <span class="home-bemvindo">
+        <img id="img-header" src="/assets/icons8-home-100 1.svg">
+        <% if @professor %>
+          <h1> Bem vindo <%= @professor.nome %> </h1>
+        <% end %>
+    </span>
+
+    <span class="home-bemvindo">
+        <img id="img-header" src="/assets/icons8-notification-100 1.svg">
+        <img id="img-header" src="/assets/icons8-user-96 1.svg">
+    </span>
+
+</header>
+
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Menu Professor</a>
@@ -30,5 +46,29 @@
 </nav>
 
 
-<h1>HomeProfessor#index</h1>
-<p>Find me in app/views/home_professor/index.html.erb</p>
+<body>
+
+    <main>
+
+            <div class="acesso-rapido">
+
+                <span class="titulo">
+                    <h1>Acesso rápido</h1>
+                </span>
+
+                <div class="acesso-rapido-interno">
+
+                  <a href="provas/new">
+                    <img id="icon1-prof" src="/assets/Group 10.svg">
+                  </a>
+
+                    <img id="icon2-prof" src="./assets/Group 2 (1).svg">
+
+                    <img id="icon3-prof" src="/assets/Group 9.svg">
+                </div>
+
+            </div>
+
+    </main>
+
+</body>

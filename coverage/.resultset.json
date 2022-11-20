@@ -78,6 +78,7 @@
         null,
         3,
         1,
+        1,
         2,
         1,
         null,
@@ -282,16 +283,38 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/myapp/app/controllers/home_professor_controller.rb": [
         1,
         1,
+        2,
+        1,
+        null,
         null,
         null
       ],
       "/myapp/app/controllers/notas_controller.rb": [
         0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         0,
         0,
         0,
@@ -323,7 +346,7 @@
         0
       ]
     },
-    "timestamp": 1667786015
+    "timestamp": 1668919198
   },
   "Cucumber Features": {
     "coverage": {
@@ -404,6 +427,44 @@
         1,
         null
       ],
+      "/myapp/app/models/prova.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/myapp/app/controllers/notas_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/myapp/app/models/notas.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
       "/myapp/app/controllers/professors_controller.rb": [
         1,
         1,
@@ -508,26 +569,6 @@
         null,
         null
       ],
-      "/myapp/app/models/prova.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/myapp/app/models/notas.rb": [
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/myapp/app/controllers/notas_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/myapp/app/controllers/login_controller.rb": [
         1,
         null,
@@ -539,6 +580,7 @@
         3,
         null,
         3,
+        1,
         1,
         2,
         1,
@@ -557,12 +599,16 @@
       "/myapp/app/controllers/home_professor_controller.rb": [
         1,
         1,
+        1,
+        1,
+        null,
         null,
         null
       ],
       "/myapp/app/controllers/home_aluno_controller.rb": [
         1,
         1,
+        null,
         null,
         null
       ],
@@ -649,6 +695,6 @@
         0
       ]
     },
-    "timestamp": 1667786028
+    "timestamp": 1668919211
   }
 }
