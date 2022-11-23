@@ -5,7 +5,7 @@ FactoryBot.define do
     enunciado { "Meu enunciado" }
     total_alternativas { 4 }
     alternativas_aluno { 3 }
-    alternativas { "Minhas alternativas..." }
+    association :alternativa_correta, factory: :alternativa
     alternativa_correta { 1 }
   end
 end
