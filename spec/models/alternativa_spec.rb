@@ -20,9 +20,9 @@ RSpec.describe QuestaoFechada, type: :model do
         grupo_questao: nil,
         titulo: "Título da Questão",
         enunciado: "Enunciado da Questão",
-        total_alternativas = 4,
-        alternativas_aluno = 3,
-        alternativa_correta = 1
+        total_alternativas: 4,
+        alternativas_aluno: 3,
+        alternativa_correta: 1
       )
       expect(questao).to_not be_valid
     end
@@ -32,9 +32,9 @@ RSpec.describe QuestaoFechada, type: :model do
         grupo_questao: "Grupo de Questão",
         titulo: nil,
         enunciado: "Enunciado da Questão",
-        total_alternativas = 4,
-        alternativas_aluno = 3,
-        alternativa_correta = 1
+        total_alternativas: 4,
+        alternativas_aluno: 3,
+        alternativa_correta: 1
       )
       expect(questao).to_not be_valid
     end
@@ -44,9 +44,9 @@ RSpec.describe QuestaoFechada, type: :model do
         grupo_questao: "Grupo de Questão",
         titulo: "Título da Questão",
         enunciado: nil,
-        total_alternativas = 4,
-        alternativas_aluno = 3,
-        alternativa_correta = 1
+        total_alternativas: 4,
+        alternativas_aluno: 3,
+        alternativa_correta: 1
       )
       expect(questao).to_not be_valid
     end
@@ -68,9 +68,9 @@ RSpec.describe QuestaoFechada, type: :model do
         grupo_questao: "Grupo de Questão",
         titulo: "Título da Questão",
         enunciado: "Enunciado da Questão",
-        total_alternativas = 4,
-        alternativas_aluno = nil,
-        alternativa_correta = 1
+        total_alternativas: 4,
+        alternativas_aluno: nil,
+        alternativa_correta: 1
       )
       expect(questao).to_not be_valid
     end
@@ -80,9 +80,9 @@ RSpec.describe QuestaoFechada, type: :model do
         grupo_questao: "Grupo de Questão",
         titulo: "Título da Questão",
         enunciado: "Enunciado da Questão",
-        total_alternativas = 4,
-        alternativas_aluno = 3,
-        alternativa_correta = nil
+        total_alternativas: 4,
+        alternativas_aluno: 3,
+        alternativa_correta: nil
       )
       expect(questao).to_not be_valid
     end
