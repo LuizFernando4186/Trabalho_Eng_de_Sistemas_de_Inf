@@ -6,7 +6,7 @@ RSpec.describe QuestaoFechada, :type => :controller do
 
         it "espero ter um array vazio" do
             get :index
-            expect(assigns(:questao_fechadas)).to be_empty #verifica se a variavel e vazia
+            expect(assigns(:questoes_fechadas)).to be_empty #verifica se a variavel e vazia
         end
 
         it "criando primeira questao_fechada" do
