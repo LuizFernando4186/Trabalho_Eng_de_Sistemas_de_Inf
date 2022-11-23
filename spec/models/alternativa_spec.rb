@@ -56,9 +56,9 @@ RSpec.describe QuestaoFechada, type: :model do
         grupo_questao: "Grupo de Questão",
         titulo: "Título da Questão",
         enunciado: "Enunciado da Questão",
-        total_alternativas = nil,
-        alternativas_aluno = 3,
-        alternativa_correta = 1
+        total_alternativas: nil,
+        alternativas_aluno: 3,
+        alternativa_correta: 1
       )
       expect(questao).to_not be_valid
     end
