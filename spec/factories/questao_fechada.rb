@@ -7,9 +7,16 @@ FactoryBot.define do
     enunciado { "Meu enunciado" }
     total_alternativas { 4 }
     alternativas_aluno { 3 }
-    alternativas { association :alternativa }
     alternativa_correta { 1 }
+    alternativas
 
   end
+
+  def alternativas_questao(num_alternativas: 4)
+    FactoryBot.create(:alternativa) do |alternativa|
+      FactoryBot.create_list(:alternativa, num_alternativas, alternativas: alternativa)
+    end
+  end
+
 
 end
