@@ -2,6 +2,6 @@ FactoryBot.define do
   factory :alternativa do
     alternativa { "Minha Alternativa" }
     correta { false }
-    questao { nil }
+    questao_id { nil }
   end
 end
