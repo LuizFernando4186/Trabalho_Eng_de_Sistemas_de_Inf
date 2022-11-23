@@ -295,6 +295,24 @@
         0,
         0,
         0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
         0
       ],
       "/myapp/app/controllers/provas_controller.rb": [
@@ -323,7 +341,7 @@
         0
       ]
     },
-    "timestamp": 1667786015
+    "timestamp": 1669229239
   },
   "Cucumber Features": {
     "coverage": {
