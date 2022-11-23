@@ -8,19 +8,13 @@ FactoryBot.define do
     total_alternativas { 4 }
     alternativas_aluno { 3 }
     alternativa_correta { 1 }
-    alts
+    alternativas
 
-  end
-
-  factory :alts do
-    alternativa { "Minha Alternativa" }
-    correta { true }
-    questao_id { nil }
   end
   
   def alternativas_questao(num_alternativas: 4)
-    FactoryBot.create(:alts) do |alts|
-      FactoryBot.create_list(:questao_fechada, num_alternativas, alts: alts)
+    FactoryBot.create(:alternativa) do |alternativa|
+      FactoryBot.create_list(:questao_fechada, num_alternativas, alternativa: alternativa)
     end
   end
 
