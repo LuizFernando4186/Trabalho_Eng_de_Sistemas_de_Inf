@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe QuestaoFechada, :type => :controller do
+RSpec.describe QuestoesFechadasController, :type => :controller do
 
     context "GET #index" do
 
