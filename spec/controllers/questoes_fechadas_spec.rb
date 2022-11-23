@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe QuestoesFechadas, :type => :controller do
+RSpec.describe QuestaoFechada, :type => :controller do
 
     context "GET #index" do
 
@@ -12,7 +12,7 @@ RSpec.describe QuestoesFechadas, :type => :controller do
         it "criando primeira questao_fechada" do
             create(:questao_fechada) #cria um questao_fechada usando o factory 
             get :index
-            expect(assigns(:questao_fechadas)).to_not be_empty 
+            expect(assigns(:questoes_fechadas)).to_not be_empty 
         end
 
     end
@@ -23,7 +23,7 @@ RSpec.describe QuestoesFechadas, :type => :controller do
         let(:questao_fechada) { create(:questao_fechada) }
         it "quando tem id" do
             get :show, params: { id: questao_fechada.id }
-            expect(assigns(:questao_fechada)).to be_a(QuestoesFechadas) 
+            expect(assigns(:questoes_fechadas)).to be_a(QuestaoFechada) 
         end
 
     end
@@ -33,8 +33,8 @@ RSpec.describe QuestoesFechadas, :type => :controller do
 
         it "espero uma nova questao_fechada" do
             get :new
-            expect(assigns(:questao_fechada)).to be_a(QuestoesFechadas) 
-            expect(assigns(:questao_fechada)).to be_a_new(QuestoesFechadas) 
+            expect(assigns(:questao_fechada)).to be_a(QuestaoFechada) 
+            expect(assigns(:questao_fechada)).to be_a_new(QuestaoFechada) 
         end
 
     end
