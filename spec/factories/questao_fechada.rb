@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :questao do
+  factory :questao_fechada do
     grupo_questao { "Grupo 1" }
     titulo { "MyString" }
     enunciado { "MyText" }
