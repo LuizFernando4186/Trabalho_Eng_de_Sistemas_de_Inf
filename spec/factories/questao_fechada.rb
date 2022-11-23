@@ -8,7 +8,7 @@ FactoryBot.define do
     total_alternativas { 4 }
     alternativas_aluno { 3 }
     alternativa_correta { 1 }
-    alternativas
+    alternativa
 
   end
 
