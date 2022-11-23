@@ -8,15 +8,17 @@ FactoryBot.define do
     total_alternativas { 4 }
     alternativas_aluno { 3 }
     alternativa_correta { 1 }
-    alternativa
+    association :alternativa
 
   end
 
+  =begin
   def alternativas_questao(num_alternativas: 4)
     FactoryBot.create(:alternativa) do |alt|
       FactoryBot.create_list(:alternativa, num_alternativas, alternativa: alt)
     end
   end
+  =end
 
 
 end
