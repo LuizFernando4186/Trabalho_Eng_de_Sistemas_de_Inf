@@ -13,8 +13,8 @@ FactoryBot.define do
   end
 
   def alternativas_questao(num_alternativas: 4)
-    FactoryBot.create(:alternativa) do |alternativa|
-      FactoryBot.create_list(:alternativa, num_alternativas, alternativa: alternativa)
+    FactoryBot.create(:alternativa) do |alt|
+      FactoryBot.create_list(:alternativa, num_alternativas, alternativa: alt)
     end
   end
 
