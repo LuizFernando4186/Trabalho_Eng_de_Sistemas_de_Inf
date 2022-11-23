@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  resources :alternativas
   resources :professors
   root to: 'login#index'
   resource :provas
   resource :alunos
   resource :notas
-  resources :questaos
+  
+  resources :questoes_fechadas do
+    resources :alternativas
+  end
 
   get 'alunos/all'
   get 'provas/all'

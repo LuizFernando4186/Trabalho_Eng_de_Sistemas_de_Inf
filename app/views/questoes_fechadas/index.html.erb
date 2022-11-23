@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Questões Fechadas</h1>
+
+<div id="questoes_fechadas">
+  <% @questoes_fechadas.each do |questao| %>
+    <%= render questao %>
+    <p>
+      <%= link_to "Ver questão", questao %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nova questão", new_questao_fechada_path %>
