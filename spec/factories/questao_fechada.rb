@@ -3,7 +3,7 @@ FactoryBot.define do
   factory :questao_fechada do
 
     after :create do |questao|
-      create_list(:alternativa, 4, questao_id: questao)
+      create_list :alternativa, 4, questao_id: questao
     end
 
     grupo_questao { "Grupo 1" }
