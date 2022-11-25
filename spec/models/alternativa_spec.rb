@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe QuestaoFechada, type: :model do
+RSpec.describe Alternativa, type: :model do
   
   context "Validações" do
+
     it "é válido com todos os atributos" do
       questao = QuestaoFechada.new(
         grupo_questao: "Grupo de Questão",
@@ -12,6 +13,10 @@ RSpec.describe QuestaoFechada, type: :model do
         alternativas_aluno: 3,
         alternativa_correta: 1
       )
+
+      questao.save!
+
+      alternativa = Alternativa.new({}
       expect(questao).to be_valid
     end
 

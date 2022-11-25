@@ -5,7 +5,7 @@ class Alternativa < ApplicationRecord
 
   validates :alternativa, presence: { message: "É obrigatório informar a descrição da alternativa!" }
   validates :correta, presence: { message: "É obrigatório informar se a alternativa é correta ou não!" }
-
+  validates :questao_id, presence: { message: "É obrigatório informar a questão!" }
 
   private
 
