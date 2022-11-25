@@ -16,7 +16,7 @@ RSpec.describe Alternativa, type: :model do
 
       questao.save!
 
-      alternativa = Alternativa.new({}
+      alternativa = Alternativa.new({questao_id: questao.id, alternativa: "Alternativa 1", correta: true})
       expect(questao).to be_valid
     end
 
