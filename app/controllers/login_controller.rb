@@ -8,6 +8,7 @@ class LoginController < ApplicationController
     @aluno = Aluno.find_by(nusp: params[:nusp])
 
     if @professor.present? 
+      session[:user_id] = @professor.id
       redirect_to home_professor_path, notice: "Professor Logado com sucesso!."
     elsif @aluno.present?
       redirect_to home_aluno_path, notice: "Aluno Logado com sucesso!." 

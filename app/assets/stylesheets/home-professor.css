@@ -4,3 +4,110 @@
     border: none;
     background-color: #ffffff;
 }
+
+header.header {
+    width: 100%;
+    height: 13vh;
+    background: #086788;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#img-header {
+    width: 6vw;
+    height: 8vh;
+    margin-right: 4%;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.home-bemvindo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home-bemvindo h1 {
+    width: 60vw;
+    height: 5vh;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FFF1D0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    height: 90vh;
+    width: 70vw;
+    position: relative;
+    display: flex;
+}
+
+.acesso-rapido {
+    width: 70vw;
+    height: 90vh;
+    background: #06AED5;
+    border-radius: 30px;
+    display: grid;
+    align-items: flex-end;
+    margin-top: 5%;
+}
+
+.acesso-rapido-interno {
+    background: rgba(8, 103, 136, 0.5);
+    border-radius: 30px;
+    width: 70vw;
+    height: 70vh;
+}
+
+span.titulo,
+span.titulo2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.titulo h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FFF1D0;
+}
+
+.acesso-rapido-interno,
+.avisos-interno {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#icon1-prof,
+#icon2-prof,
+#icon3-prof {
+    cursor: pointer;
+    margin-left: 5%;
+}
+
+#icon1-prof {
+    width: 30vw;
+    height: 10vh;
+
+}
+
+#icon2-prof {
+    width: 29vw;
+    height: 10vh;
+
+}
+
+#icon3-prof {
+    width: 39vw;
+    height: 10vh;
+}
