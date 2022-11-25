@@ -11,6 +11,15 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_11_05_172039) do
+  create_table "alternativas", force: :cascade do |t|
+    t.text "alternativa"
+    t.boolean "correta"
+    t.integer "questao_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["questao_id"], name: "index_alternativas_on_questao_id"
+  end
+
   create_table "alunos", force: :cascade do |t|
     t.string "nome"
     t.string "email"
@@ -42,17 +51,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_05_172039) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "questaos", force: :cascade do |t|
+  create_table "questoes_fechadas", force: :cascade do |t|
     t.string "grupo_questao"
-    t.string "tipo"
     t.string "titulo"
     t.text "enunciado"
     t.integer "total_alternativas"
     t.integer "alternativas_aluno"
-    t.text "alternativas", default: "--- []\n"
+    t.text "alternativas"
     t.integer "alternativa_correta"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "alternativas", "questoes"
 end
