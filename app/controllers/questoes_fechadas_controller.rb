@@ -26,7 +26,7 @@ class QuestoesFechadasController < ApplicationController
 
     respond_to do |format|
       if @questao_fechada.save
-        format.html { redirect_to questao_fechada_url(@questao_fechada), notice: "Questao was successfully created." }
+        format.html { redirect_to questao_fechada_url(@questao_fechada), notice: "Questao fechada criada com sucesso." }
         format.json { render :show, status: :created, location: @questao_fechada }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +39,7 @@ class QuestoesFechadasController < ApplicationController
   def update
     respond_to do |format|
       if @questao_fechada.update(questao_fechada_params)
-        format.html { redirect_to questao_fechada_url(@questao_fechada), notice: "Questao was successfully updated." }
+        format.html { redirect_to questao_fechada_url(@questao_fechada), notice: "Questao fechada atualizada com sucesso." }
         format.json { render :show, status: :ok, location: @questao }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +53,7 @@ class QuestoesFechadasController < ApplicationController
     @questao_fechada.destroy
 
     respond_to do |format|
-      format.html { redirect_to questoes_fechadas_url, notice: "Questao was successfully destroyed." }
+      format.html { redirect_to questoes_fechadas_url, notice: "Questao fechada apagada com sucesso." }
       format.json { head :no_content }
     end
   end

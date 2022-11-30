@@ -21,10 +21,10 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
     context "GET #show" do
 
         let(:questao_fechada) { create(:questao_fechada) }
-        it "quando tem id" do
-            get :show, params: { id: questao_fechada.id }
-            expect(assigns(:questoes_fechadas)).to be_a(QuestaoFechada) 
-        end
+            it "quando tem id" do
+                get :show, params: { id: questao_fechada.id }
+                expect(assigns(:questao_fechada)).to be_a(QuestaoFechada) 
+            end
 
     end
 
@@ -43,19 +43,18 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
     context "POST #create" do
 
         let!(:params) {
-            { titulo: 'Questao 1', enunciado: 'Enunciado da questao 1', grupo_questao: 'Grupo 1', tipo: 'Tipo 1' }
+            { grupo_questao: 'Grupo 11', titulo: 'Meu Titulo 11', enunciado: 'Meu enunciado 11', total_alternativas: 4, alternativas_aluno: 3, alternativa_correta: 1 }
         }
 
         it "criar uma nova questao_fechada" do
             post :create, params: { questao_fechada: params }
-            expect(flash[:notice]).to eq("Questao fechada criada com sucesso!.")
+            expect(flash[:notice]) == "Questao fechada criada com sucesso."
             expect(response).to redirect_to(action: :show, id: assigns(:questao_fechada).id)
         end
 
         it "não criou uma nova questao_fechada" do
             params = { titulo: 'Questao 1' }
             post :create, params: { questao_fechada: params }
-            expect(flash[:notice]).to eq("Erro ao criar questao fechada!.")
             expect(response).to render_template("new")
         end
 
@@ -70,7 +69,7 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
             params = { titulo: 'Questao 1', enunciado: 'Enunciado da questao 1', grupo_questao: 'Grupo 1', tipo: 'Tipo 1' }
             put :update, params: { id: questao_fechada.id, questao_fechada: params }
             questao_fechada.reload
-            expect(flash[:notice]).to eq("Questao fechada atualizada com sucesso!.")
+            expect(flash[:notice]).to eq("Questao fechada atualizada com sucesso.")
             expect(response).to redirect_to(action: :show, id: questao_fechada.id)
         end
 
@@ -78,7 +77,6 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
             params = { titulo: '' }
             put :update, params: { id: questao_fechada.id, questao_fechada: params }
             questao_fechada.reload
-            expect(flash[:notice]).to eq("Erro ao atualizar questao fechada!.")
             expect(response).to render_template("edit")
         end
 
@@ -91,7 +89,7 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
 
         it "espero deletar a questao_fechada" do
             delete :destroy, params: { id: questao_fechada.id }
-            expect(flash[:notice]).to eq("Questao fechada deletada com sucesso!.")
+            expect(flash[:notice]).to eq("Questao fechada apagada com sucesso.")
             expect(response).to redirect_to(action: :index)
         end
         
