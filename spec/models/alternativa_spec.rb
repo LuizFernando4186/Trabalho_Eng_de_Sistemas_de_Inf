@@ -1,98 +1,72 @@
 require 'rails_helper'
 
 RSpec.describe Alternativa, type: :model do
-  
-  context "Validações" do
 
     it "é válido com todos os atributos" do
-      questao = QuestaoFechada.new(
+      questao = QuestaoFechada.new({
         grupo_questao: "Grupo de Questão",
         titulo: "Título da Questão",
         enunciado: "Enunciado da Questão",
         total_alternativas: 4,
         alternativas_aluno: 3,
         alternativa_correta: 1
-      )
+      })
 
       questao.save!
 
-      alternativa = Alternativa.new({questao_id: questao.id, alternativa: "Alternativa 1", correta: true})
-      expect(questao).to be_valid
+      alternativa = Alternativa.new({questao_fechada_id: questao.id, alternativa: "Alternativa 1", correta: true})
+      expect(alternativa).to be_valid
     end
 
-    it "é inválido sem grupo de questão" do
-      questao = QuestaoFechada.new(
-        grupo_questao: nil,
-        titulo: "Título da Questão",
-        enunciado: "Enunciado da Questão",
-        total_alternativas: 4,
-        alternativas_aluno: 3,
-        alternativa_correta: 1
-      )
-      expect(questao).to_not be_valid
-    end
-
-    it "é inválido sem título de questão" do
-      questao = QuestaoFechada.new(
-        grupo_questao: "Grupo de Questão",
-        titulo: nil,
-        enunciado: "Enunciado da Questão",
-        total_alternativas: 4,
-        alternativas_aluno: 3,
-        alternativa_correta: 1
-      )
-      expect(questao).to_not be_valid
-    end
-
-    it "é inválido sem enunciado de questão" do
-      questao = QuestaoFechada.new(
-        grupo_questao: "Grupo de Questão",
-        titulo: "Título da Questão",
-        enunciado: nil,
-        total_alternativas: 4,
-        alternativas_aluno: 3,
-        alternativa_correta: 1
-      )
-      expect(questao).to_not be_valid
-    end
-
-    it "é inválido sem total de alternativas" do
-      questao = QuestaoFechada.new(
-        grupo_questao: "Grupo de Questão",
-        titulo: "Título da Questão",
-        enunciado: "Enunciado da Questão",
-        total_alternativas: nil,
-        alternativas_aluno: 3,
-        alternativa_correta: 1
-      )
-      expect(questao).to_not be_valid
-    end
-
-    it "é inválido sem alternativas do aluno" do
-      questao = QuestaoFechada.new(
-        grupo_questao: "Grupo de Questão",
-        titulo: "Título da Questão",
-        enunciado: "Enunciado da Questão",
-        total_alternativas: 4,
-        alternativas_aluno: nil,
-        alternativa_correta: 1
-      )
-      expect(questao).to_not be_valid
-    end
-
-    it "é inválido sem alternativa correta" do
-      questao = QuestaoFechada.new(
+    it "é invalido sem alternativa" do
+      questao = QuestaoFechada.new({
         grupo_questao: "Grupo de Questão",
         titulo: "Título da Questão",
         enunciado: "Enunciado da Questão",
         total_alternativas: 4,
         alternativas_aluno: 3,
-        alternativa_correta: nil
-      )
-      expect(questao).to_not be_valid
+        alternativa_correta: 1
+      })
+
+      questao.save!
+
+      alternativa = Alternativa.new({questao_fechada_id: questao.id, correta: true})
+      expect(alternativa).to_not be_valid
     end
 
-    
-  end
+
+    it "é invalido sem informar se é correta ou não" do
+      questao = QuestaoFechada.new({
+        grupo_questao: "Grupo de Questão",
+        titulo: "Título da Questão",
+        enunciado: "Enunciado da Questão",
+        total_alternativas: 4,
+        alternativas_aluno: 3,
+        alternativa_correta: 1
+      })
+
+      questao.save!
+
+      alternativa = Alternativa.new({questao_fechada_id: questao.id, alternativa: "Alternativa 1"})
+      expect(alternativa).to_not be_valid
+    end
+
+
+    it "é invalido sem questao_id" do
+      questao = QuestaoFechada.new({
+        grupo_questao: "Grupo de Questão",
+        titulo: "Título da Questão",
+        enunciado: "Enunciado da Questão",
+        total_alternativas: 4,
+        alternativas_aluno: 3,
+        alternativa_correta: 1
+      })
+
+      questao.save!
+
+      alternativa = Alternativa.new({alternativa: "Alternativa 1", correta: true})
+      expect(alternativa).to_not be_valid
+    end
+
 
 end

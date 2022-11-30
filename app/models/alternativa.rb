@@ -5,12 +5,12 @@ class Alternativa < ApplicationRecord
 
   validates :alternativa, presence: { message: "É obrigatório informar a descrição da alternativa!" }
   validates :correta, presence: { message: "É obrigatório informar se a alternativa é correta ou não!" }
-  validates :questao_id, presence: { message: "É obrigatório informar a questão!" }
+  validates :questao_fechada_id, presence: { message: "É obrigatório informar a questão!" }
 
   private
 
     def get_questao
-      @questao_fechada = QuestaoFechada.find(params[:questao_id])
+      @questao_fechada = QuestaoFechada.find(params[:questao_fechada_id])
     end
 
 end
