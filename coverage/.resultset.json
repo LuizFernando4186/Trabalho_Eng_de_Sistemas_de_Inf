@@ -33,29 +33,6 @@
         1,
         null
       ],
-      "/myapp/app/models/alternativa.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null
-      ],
-      "/myapp/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/myapp/app/models/questao_fechada.rb": [
         1,
         null,
@@ -70,6 +47,11 @@
         null,
         1,
         null,
+        null
+      ],
+      "/myapp/app/models/application_record.rb": [
+        1,
+        1,
         null
       ],
       "/myapp/app/controllers/alternativas_controller.rb": [
@@ -416,6 +398,24 @@
         0,
         0
       ],
+      "/myapp/app/models/alternativa.rb": [
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0
+      ],
       "/myapp/app/models/aluno.rb": [
         0,
         0,
@@ -447,7 +447,7 @@
         0
       ]
     },
-    "timestamp": 1669848861
+    "timestamp": 1669850445
   },
   "Cucumber Features": {
     "coverage": {
