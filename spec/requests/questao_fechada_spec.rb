@@ -43,15 +43,15 @@ RSpec.describe "/questoes", type: :request do
 
   describe "GET /new" do
     it "renders a successful response" do
-      get new_questao_url
+      get new_questao_fechada_url
       expect(response).to be_successful
     end
   end
 
   describe "GET /edit" do
     it "renders a successful response" do
-      questao = Questao.create! valid_attributes
-      get edit_questao_url(questao)
+      questao = QuestaoFechada.create! valid_attributes
+      get edit_questao_fechada_url(questao)
       expect(response).to be_successful
     end
   end
@@ -60,25 +60,25 @@ RSpec.describe "/questoes", type: :request do
     context "with valid parameters" do
       it "creates a new Questao" do
         expect {
-          post questaos_url, params: { questao: valid_attributes }
-        }.to change(Questao, :count).by(1)
+          post questoes_fechadas_url, params: { questao: valid_attributes }
+        }.to change(QuestaoFechada, :count).by(1)
       end
 
       it "redirects to the created questao" do
-        post questaos_url, params: { questao: valid_attributes }
-        expect(response).to redirect_to(questao_url(Questao.last))
+        post questoes_fechadas_url, params: { questao: valid_attributes }
+        expect(response).to redirect_to(questao_url(QuestaoFechada.last))
       end
     end
 
     context "with invalid parameters" do
       it "does not create a new Questao" do
         expect {
-          post questaos_url, params: { questao: invalid_attributes }
-        }.to change(Questao, :count).by(0)
+          post questoes_fechadas_url, params: { questao: invalid_attributes }
+        }.to change(QuestaoFechada, :count).by(0)
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
-        post questaos_url, params: { questao: invalid_attributes }
+        post questoes_fechadas_url, params: { questao: invalid_attributes }
         expect(response).to be_successful
       end
     end
@@ -91,15 +91,15 @@ RSpec.describe "/questoes", type: :request do
       }
 
       it "updates the requested questao" do
-        questao = Questao.create! valid_attributes
-        patch questao_url(questao), params: { questao: new_attributes }
+        questao = QuestaoFechada.create! valid_attributes
+        patch questao_fechada_url(questao), params: { questao: new_attributes }
         questao.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the questao" do
-        questao = Questao.create! valid_attributes
-        patch questao_url(questao), params: { questao: new_attributes }
+        questao = QuestaoFechada.create! valid_attributes
+        patch questao_fechada_url(questao), params: { questao: new_attributes }
         questao.reload
         expect(response).to redirect_to(questao_url(questao))
       end
@@ -107,8 +107,8 @@ RSpec.describe "/questoes", type: :request do
 
     context "with invalid parameters" do
       it "renders a successful response (i.e. to display the 'edit' template)" do
-        questao = Questao.create! valid_attributes
-        patch questao_url(questao), params: { questao: invalid_attributes }
+        questao = QuestaoFechada.create! valid_attributes
+        patch questao_fechada_url(questao), params: { questao: invalid_attributes }
         expect(response).to be_successful
       end
     end
@@ -116,15 +116,15 @@ RSpec.describe "/questoes", type: :request do
 
   describe "DELETE /destroy" do
     it "destroys the requested questao" do
-      questao = Questao.create! valid_attributes
+      questao = QuestaoFechada.create! valid_attributes
       expect {
-        delete questao_url(questao)
+        delete questao_fechada_url(questao)
       }.to change(Questao, :count).by(-1)
     end
 
     it "redirects to the questaos list" do
-      questao = Questao.create! valid_attributes
-      delete questao_url(questao)
+      questao = QuestaoFechada.create! valid_attributes
+      delete questao_fechada_url(questao)
       expect(response).to redirect_to(questaos_url)
     end
   end
