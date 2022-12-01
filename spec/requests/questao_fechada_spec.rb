@@ -12,7 +12,7 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/questaos", type: :request do
+RSpec.describe "/questoes", type: :request do
   
   # This should return the minimal set of attributes required to create a valid
   # Questao. As you add validations to Questao, be sure to
@@ -27,7 +27,7 @@ RSpec.describe "/questaos", type: :request do
 
   describe "GET /index" do
     it "renders a successful response" do
-      Questao.create! valid_attributes
+      QuestaoFechada.create! valid_attributes
       get questaos_url
       expect(response).to be_successful
     end
@@ -35,7 +35,7 @@ RSpec.describe "/questaos", type: :request do
 
   describe "GET /show" do
     it "renders a successful response" do
-      questao = Questao.create! valid_attributes
+      questao = QuestaoFechada.create! valid_attributes
       get questao_url(questao)
       expect(response).to be_successful
     end
