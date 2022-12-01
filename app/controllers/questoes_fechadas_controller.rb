@@ -26,7 +26,7 @@ class QuestoesFechadasController < ApplicationController
 
     respond_to do |format|
       if @questao_fechada.save
-        format.html { redirect_to questao_fechada_url(@questao_fechada), notice: "Questao fechada criada com sucesso." }
+        format.html { redirect_to alternativa_url(@questao_fechada) }
         format.json { render :show, status: :created, location: @questao_fechada }
       else
         format.html { render :new, status: :unprocessable_entity }

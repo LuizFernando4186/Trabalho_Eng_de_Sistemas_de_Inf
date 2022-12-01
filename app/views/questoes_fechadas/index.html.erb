@@ -3,10 +3,10 @@
 <h1>Questões Fechadas</h1>
 
 <div id="questoes_fechadas">
-  <% @questoes_fechadas.each do |questao| %>
-    <%= render questao %>
+  <% @questoes_fechadas.each do |questao_fechada| %>
+    <%= render questao_fechada %>
     <p>
-      <%= link_to "Ver questão", questao %>
+      <%= link_to "Ver questão", questao_fechada %>
     </p>
   <% end %>
 </div>

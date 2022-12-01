@@ -46,10 +46,9 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
             { grupo_questao: 'Grupo 11', titulo: 'Meu Titulo 11', enunciado: 'Meu enunciado 11', total_alternativas: 4, alternativas_aluno: 3, alternativa_correta: 1 }
         }
 
-        it "criar uma nova questao_fechada" do
+        it "criar uma nova questao_fechada e vai para a página de alternativa" do
             post :create, params: { questao_fechada: params }
-            expect(flash[:notice]) == "Questao fechada criada com sucesso."
-            expect(response).to redirect_to(action: :show, id: assigns(:questao_fechada).id)
+            expect(response).to redirect_to("#{alternativas_path}/#{QuestaoFechada.last.id}")
         end
 
         it "não criou uma nova questao_fechada" do

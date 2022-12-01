@@ -1,10 +1,10 @@
-<%= form_with(model: questao) do |form| %>
-  <% if questao.errors.any? %>
+<%= form_with(model: @questao_fechada) do |form| %>
+  <% if @questao_fechada.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(questao.errors.count, "error") %> prohibited this questao from being saved:</h2>
+      <h2><%= pluralize(questao_fechada.errors.count, "error") %> prohibited this questao from being saved:</h2>
 
       <ul>
-        <% questao.errors.each do |error| %>
+        <% questao_fechada.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -36,89 +36,12 @@
     <%= form.number_field :alternativas_aluno %>
   </div>
 
-  <div id="alternativas">
-    <p> Descrições das alternativas </p>
+  <div>
+    <%= form.label :alternativa_correta, style: "display: block" %>
+    <%= form.number_field :alternativa_correta %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
-
-
-
-<script>
-
-function limparAlternativas(div){
-
-  try{
-    while (div.hasChildNodes()) {
-      div.removeChild(div.firstChild)
-    }
-    div.remove()
-  }
-  catch(err){
-    console.log(err)
-  }
-
-}
-
-
-function criarAlternativa(id){
-
-  var div = document.createElement("alternativa-" + id)
-  var botaoSelecao = document.createElement("input")
-  var descricao_alternativa = document.createElement("input")
-  
-  botaoSelecao.setAttribute("type", "radio")
-  botaoSelecao.setAttribute("name", "alternativa-selecionada")
-  botaoSelecao.setAttribute("id", id) 
-  descricao_alternativa.type = "text"
-
-  div.appendChild(botaoSelecao)
-  div.appendChild(descricao_alternativa)
-  div.appendChild(document.createElement("br"))
-
-  return div
-
-}
-
-
-
-function createAlternativas(quantidade){
-
-  var parent = document.getElementById("alternativas")
-  var div = document.createElement("div")
-  div.setAttribute("id", "alternativas-descricoes")
-  console.log(`Criando ${quantidade} alternativas`)
-  
-  for (let i = 0; i < quantidade; i++){
-    div.appendChild(criarAlternativa(i))
-  }
-
-  parent.appendChild(div)
-
-}
-
-
-
-// Atualização dos valores
-const total_alternativas = document.getElementById("questao_fechada_total_alternativas");
-
-total_alternativas.addEventListener("change", function handleChange(event) {
-  
-  if (event.target.value == 0) {
-    alert("O total de alternativas deve ser maior que zero!");
-    event.target.value = 1;
-    return;
-  }
-
-  total_alternativas.value = event.target.value;
-  limparAlternativas(document.getElementById("alternativas-descricoes"))
-  createAlternativas(total_alternativas.value)
-  console.log(total_alternativas.value);
-  
-});
-
-
-</script>

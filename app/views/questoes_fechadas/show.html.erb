@@ -1,10 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @questao %>
+<%= render @questao_fechada %>
 
 <div>
-  <%= link_to "Edit this questao", edit_questao_path(@questao) %> |
-  <%= link_to "Back to questaos", questaos_path %>
+  <%= link_to "Editar essa questão", edit_questao_fechada_path(@questao_fechada) %> |
+  <%= link_to "Voltar para questões fechadas", questoes_fechadas_path %>
 
-  <%= button_to "Destroy this questao", @questao, method: :delete %>
+  <%= button_to "Apagar essa questão", @questao_fechada, method: :delete %>
 </div>
