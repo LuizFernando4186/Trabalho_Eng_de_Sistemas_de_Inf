@@ -22,10 +22,30 @@ class AlunosController < ApplicationController
   def show
     @aluno = Aluno.find(params[:id])
   end
+  
+  def filter
+    email = params[:email]
+    nome = params[:nome]
+
+    case [email, nome]
+    in [nil, nil]
+      @aluno = Aluno.first()
+
+    in [e, nil]
+      @aluno = Aluno.find_by(email: e)
+
+    in [nil, n]
+      @aluno = Aluno.find_by(nome: n)
+
+    in [e,n]
+      @aluno = Aluno.find_by(email: e, nome: n)
+    end
+
+    redirect_to action: 'show', id: @aluno.id
+  end
 
   private
   def aluno_params
     params.require(:aluno).permit(:nome, :email, :nusp)
-
   end
 end

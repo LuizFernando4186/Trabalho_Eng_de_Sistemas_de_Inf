@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   get 'alunos/all'
+  get 'alunos/filter'
   get 'provas/all'
   get 'notas/all'
   get 'sign_in', to: "login#index"
