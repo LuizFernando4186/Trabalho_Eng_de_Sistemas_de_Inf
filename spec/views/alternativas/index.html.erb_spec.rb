@@ -8,7 +8,7 @@ RSpec.describe "alternativas/index", type: :view do
       :titulo => "Meu titulo",
       :enunciado => "Meu enunciado",
       :total_alternativas => 4,
-      :alternativas_aluno => 1,
+      :alternativas_aluno => 3,
       :alternativa_correta => 1
     ))
     assign(:alternativas, [
@@ -29,8 +29,9 @@ RSpec.describe "alternativas/index", type: :view do
 
     render
 
-    assert_select "tr>td", :text => "Minha alternativa A".to_s, :count => 1
-    assert_select "tr>td", :text => "Minha alternativa B".to_s, :count => 1
+    expect(rendered).to match /Minha alternativa A/
+    expect(rendered).to match /Minha alternativa B/
+
   end
 
 end

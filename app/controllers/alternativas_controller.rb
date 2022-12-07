@@ -25,7 +25,7 @@ class AlternativasController < ApplicationController
 
     respond_to do |format|
       if @alternativa.save
-        format.html { redirect_to alternativa_url(@alternativa), notice: "Alternativa was successfully created." }
+        format.html { redirect_to alternativa_url(@alternativa), notice: "Alternativa criada com sucesso." }
         format.json { render :show, status: :created, location: @alternativa }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +65,6 @@ class AlternativasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def alternativa_params
-      params.require(:alternativa).permit(:alternativa, :correta, :questao_id)
+      params.require(:alternativa).permit(:alternativa, :correta, :questao_fechada_id)
     end
 end
