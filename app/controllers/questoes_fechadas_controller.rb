@@ -13,7 +13,6 @@ class QuestoesFechadasController < ApplicationController
   # GET /questaos/new
   def new
     @questao_fechada = QuestaoFechada.new
-    
   end
 
   # GET /questaos/1/edit
@@ -26,7 +25,7 @@ class QuestoesFechadasController < ApplicationController
 
     respond_to do |format|
       if @questao_fechada.save
-        format.html { redirect_to alternativa_url(@questao_fechada) }
+        format.html { redirect_to questao_fechada_url(@questao_fechada) }
         format.json { render :show, status: :created, location: @questao_fechada }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -66,6 +65,9 @@ class QuestoesFechadasController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def questao_fechada_params
-      params.require(:questao_fechada).permit(:grupo_questao, :titulo, :enunciado, :total_alternativas, :alternativas_aluno, :alternativa_correta, alternativas_attributes: [:alternativa, :correta])
+      puts "Carregando parametros... "
+      puts params
+      params.permit(:grupo_questao, :titulo, :enunciado, :total_alternativas, :alternativas_aluno, :alternativa_correta)
+      puts "Parametros carregados"
     end
 end
