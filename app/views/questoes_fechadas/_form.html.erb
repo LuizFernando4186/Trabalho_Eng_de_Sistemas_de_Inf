@@ -1,16 +1,15 @@
-<%= form_with url: "/questoes_fechadas", method: :post do |form| %>
-  <% if @questao_fechada %>
-    <% if @questao_fechada.errors.any? %>
-      <div style="color: red">
-        <h2><%= pluralize(@questao_fechada.errors.count, "error") %> prohibited this questao from being saved:</h2>
+<%= form_with(model: @questao_fechada) do |form| %>
 
-        <ul>
-          <% @questao_fechada.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <% if @questao_fechada.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@questao_fechada.errors.count, "error") %> prohibited this questao from being saved:</h2>
+
+      <ul>
+        <% @questao_fechada.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
 
   <div>

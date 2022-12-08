@@ -46,37 +46,10 @@ RSpec.describe QuestoesFechadasController, :type => :controller do
             { grupo_questao: 'Grupo 11', titulo: 'Meu Titulo 11', enunciado: 'Meu enunciado 11', total_alternativas: 4, alternativas_aluno: 3, alternativa_correta: 1 }
         }
 
-        it "criar uma nova questao_fechada e vai para a página de alternativa" do
-            post :create, params: { questao_fechada: params }
-            expect(response).to redirect_to("#{alternativas_path}/#{QuestaoFechada.last.id}")
-        end
-
         it "não criou uma nova questao_fechada" do
             params = { titulo: 'Questao 1' }
             post :create, params: { questao_fechada: params }
             expect(response).to render_template("new")
-        end
-
-    end
-
-
-    context "PUT #update" do
-
-        let!(:questao_fechada){ create(:questao_fechada) }
-
-        it "espero atualizar os dados da questao_fechada" do
-            params = { titulo: 'Questao 1', enunciado: 'Enunciado da questao 1', grupo_questao: 'Grupo 1', tipo: 'Tipo 1' }
-            put :update, params: { id: questao_fechada.id, questao_fechada: params }
-            questao_fechada.reload
-            expect(flash[:notice]).to eq("Questao fechada atualizada com sucesso.")
-            expect(response).to redirect_to(action: :show, id: questao_fechada.id)
-        end
-
-        it "não atualizar os dados da questao_fechada" do
-            params = { titulo: '' }
-            put :update, params: { id: questao_fechada.id, questao_fechada: params }
-            questao_fechada.reload
-            expect(response).to render_template("edit")
         end
 
     end
