@@ -1,24 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe "alternativas/new", type: :view do
-  before(:each) do
-    assign(:alternativa, Alternativa.new(
-      alternativa: "MyText",
-      correta: false,
-      questao: nil
-    ))
-  end
 
   it "renders new alternativa form" do
+
     render
 
-    assert_select "form[action=?][method=?]", alternativas_path, "post" do
+    expect(rendered).to match /Nova alternativa/
+    expect(rendered).to match /Alternativa/
+    expect(rendered).to match /Correta/
+    expect(rendered).to match /ID Questão Fechada/
 
-      assert_select "textarea[name=?]", "alternativa[alternativa]"
-
-      assert_select "input[name=?]", "alternativa[correta]"
-
-      assert_select "input[name=?]", "alternativa[questao_id]"
-    end
   end
+
 end

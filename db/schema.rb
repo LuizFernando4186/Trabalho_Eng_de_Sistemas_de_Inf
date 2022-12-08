@@ -14,10 +14,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_05_172039) do
   create_table "alternativas", force: :cascade do |t|
     t.text "alternativa"
     t.boolean "correta"
-    t.integer "questao_id", null: false
+    t.integer "questao_fechada_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["questao_id"], name: "index_alternativas_on_questao_id"
+    t.index ["questao_fechada_id"], name: "index_alternativas_on_questao_fechada_id"
   end
 
   create_table "alunos", force: :cascade do |t|
@@ -63,5 +63,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_05_172039) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "alternativas", "questoes"
 end

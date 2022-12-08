@@ -2,24 +2,36 @@ require 'rails_helper'
 
 RSpec.describe "alternativas/index", type: :view do
   before(:each) do
+
+    @questao_fechada = assign(:questao_fechada, QuestaoFechada.create!(
+      :grupo_questao => "Meu grupo de questao",
+      :titulo => "Meu titulo",
+      :enunciado => "Meu enunciado",
+      :total_alternativas => 4,
+      :alternativas_aluno => 3,
+      :alternativa_correta => 1
+    ))
     assign(:alternativas, [
       Alternativa.create!(
-        alternativa: "MyText",
-        correta: false,
-        questao: nil
+        alternativa: "Minha alternativa A",
+        correta: true,
+        questao_fechada_id: @questao_fechada.id
       ),
       Alternativa.create!(
-        alternativa: "MyText",
-        correta: false,
-        questao: nil
+        alternativa: "Minha alternativa B",
+        correta: true,
+        questao_fechada_id: @questao_fechada.id
       )
     ])
   end
 
   it "renders a list of alternativas" do
+
     render
-    assert_select "tr>td", text: "MyText".to_s, count: 2
-    assert_select "tr>td", text: false.to_s, count: 2
-    assert_select "tr>td", text: nil.to_s, count: 2
+
+    expect(rendered).to match /Minha alternativa A/
+    expect(rendered).to match /Minha alternativa B/
+
   end
+
 end

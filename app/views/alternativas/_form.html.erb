@@ -1,15 +1,18 @@
 <%= form_with(model: alternativa) do |form| %>
-  <% if alternativa.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(alternativa.errors.count, "error") %> prohibited this alternativa from being saved:</h2>
 
+    <div style="color: red">
+      <% if alternativa %>
+      
+      <h2><%= pluralize(alternativa.errors.count, "error") %> prohibited this alternativa from being saved:</h2>
       <ul>
+
         <% alternativa.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
+      
+      <% end %>
     </div>
-  <% end %>
 
   <div>
     <%= form.label :alternativa, style: "display: block" %>
@@ -22,11 +25,11 @@
   </div>
 
   <div>
-    <%= form.label :questao_id, style: "display: block" %>
-    <%= form.text_field :questao_id %>
+    <%= form.label :questao_fechada_id, 'ID Questão Fechada', style: "display: block" %>
+    <%= form.text_field :questao_fechada_id %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Salvar alternativa" %>
   </div>
 <% end %>

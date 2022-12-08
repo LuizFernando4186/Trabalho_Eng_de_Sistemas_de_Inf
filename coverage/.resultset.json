@@ -1,6 +1,10 @@
 {
   "RSpec": {
     "coverage": {
+      "/myapp/app/helpers/alternativas_helper.rb": [
+        1,
+        null
+      ],
       "/myapp/app/helpers/application_helper.rb": [
         1,
         null
@@ -25,7 +29,7 @@
         1,
         null
       ],
-      "/myapp/app/helpers/questaos_helper.rb": [
+      "/myapp/app/helpers/questoes_fechadas_helper.rb": [
         1,
         null
       ],
@@ -162,9 +166,90 @@
         null,
         null
       ],
-      "/myapp/app/models/aluno.rb": [
+      "/myapp/app/controllers/questoes_fechadas_controller.rb": [
         1,
         1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        2,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        2,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/myapp/app/models/alternativa.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         1,
         null,
         null
@@ -172,6 +257,13 @@
       "/myapp/app/models/application_record.rb": [
         1,
         1,
+        null
+      ],
+      "/myapp/app/models/aluno.rb": [
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/myapp/app/models/notas.rb": [
@@ -197,17 +289,23 @@
         null,
         null
       ],
-      "/myapp/app/models/questao.rb": [
+      "/myapp/app/models/questao_fechada.rb": [
+        1,
+        null,
         1,
         null,
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
         1,
         null,
         null
       ],
-      "/myapp/app/controllers/questaos_controller.rb": [
+      "/myapp/app/controllers/alternativas_controller.rb": [
         1,
         1,
         null,
@@ -346,7 +444,7 @@
         0
       ]
     },
-    "timestamp": 1668919198
+    "timestamp": 1670467911
   },
   "Cucumber Features": {
     "coverage": {
@@ -391,6 +489,10 @@
         1,
         null
       ],
+      "/myapp/app/helpers/alternativas_helper.rb": [
+        1,
+        null
+      ],
       "/myapp/app/helpers/home_helper.rb": [
         1,
         null
@@ -411,7 +513,7 @@
         1,
         null
       ],
-      "/myapp/app/helpers/questaos_helper.rb": [
+      "/myapp/app/helpers/questoes_fechadas_helper.rb": [
         1,
         null
       ],
@@ -569,6 +671,97 @@
         null,
         null
       ],
+      "/myapp/app/controllers/questoes_fechadas_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        2,
+        0,
+        0,
+        null,
+        4,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/myapp/app/models/questao_fechada.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
       "/myapp/app/controllers/login_controller.rb": [
         1,
         null,
@@ -612,7 +805,7 @@
         null,
         null
       ],
-      "/myapp/app/controllers/questaos_controller.rb": [
+      "/myapp/app/controllers/alternativas_controller.rb": [
         0,
         0,
         null,
@@ -684,17 +877,20 @@
         0,
         0
       ],
-      "/myapp/app/models/questao.rb": [
+      "/myapp/app/models/alternativa.rb": [
+        0,
+        null,
         0,
         null,
         0,
         0,
         0,
+        null,
         0,
         null,
         0
       ]
     },
-    "timestamp": 1668919211
+    "timestamp": 1670467886
   }
 }

@@ -1,42 +1,37 @@
-<div id="<%= dom_id questao %>">
+<div id="<%= dom_id questao_fechada %>">
   <p>
     <strong>Grupo questao:</strong>
-    <%= questao.grupo_questao %>
-  </p>
-
-  <p>
-    <strong>Tipo:</strong>
-    <%= questao.tipo %>
+    <%= questao_fechada.grupo_questao %>
   </p>
 
   <p>
     <strong>Titulo:</strong>
-    <%= questao.titulo %>
+    <%= questao_fechada.titulo %>
   </p>
 
   <p>
     <strong>Enunciado:</strong>
-    <%= questao.enunciado %>
+    <%= questao_fechada.enunciado %>
   </p>
 
   <p>
     <strong>Total alternativas:</strong>
-    <%= questao.total_alternativas %>
+    <%= questao_fechada.total_alternativas %>
   </p>
 
   <p>
     <strong>Alternativas aluno:</strong>
-    <%= questao.alternativas_aluno %>
+    <%= questao_fechada.alternativas_aluno %>
   </p>
 
   <p>
     <strong>Alternativas:</strong>
-    <%= questao.alternativas %>
+    <%= link_to "Ver alternativas", questao_fechada %>
   </p>
 
   <p>
     <strong>Alternativa correta:</strong>
-    <%= questao.alternativa_correta %>
+    <%= questao_fechada.alternativa_correta %>
   </p>
 
 </div>

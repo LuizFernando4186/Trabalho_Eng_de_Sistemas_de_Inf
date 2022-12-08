@@ -3,7 +3,7 @@ class CreateAlternativas < ActiveRecord::Migration[7.0]
     create_table :alternativas do |t|
       t.text :alternativa
       t.boolean :correta
-      t.references :questao, null: false, foreign_key: true
+      t.belongs_to :questao_fechada
 
       t.timestamps
     end
